@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   	<link rel="stylesheet" href="сss/styles.css">
+  <script src="https://kit.fontawesome.com/7c16640ea8.js" crossorigin="anonymous"></script>
 	<title>Transport_sharing</title>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500&family=Montserrat:ital,wght@0,400;0,500;1,500&display=swap" rel="stylesheet">
@@ -17,15 +18,15 @@
 					<div class="text">Transport Sharing</div>
 				</div>
 				<nav class="header__nav">
-		          <a class="nav__link " href="#">Контакты</a>
-		          <a class="nav__link" href="#">Карты</a>
-		          <a class="nav__link" href="#">Скидки</a>
+              <button class="nav__link_enter">Вход</button>
+              <button class="nav__link_reg">Регистрация</button>
 		        </nav>
 			</div>
 		</div>
 	</header>
 	<main>    
     <div class="container">
+      <!-- proposition -->
       <div class="proposition">
         <div id="box">
           <div class="proposition__items">
@@ -45,8 +46,119 @@
             <img class="phone" src="img/phone.png" alt="">
           </div>
         </div>
+      </div> 
+      <!-- proposition -->
+      <!-- cities -->
+      <div class="our_company">
+        <div class="container_company">
+          <h2>Где мы работаем?</h2>
+          <h3>UA Украина</h3>
+          <div class="cities">
+            <div class="list_cities">
+              <p>Харьков</p>
+              <p>Киев</p>
+              <p>Днепр</p>
+              <p>Херсон</p>
+            </div>
+            <div class="list_cities">
+              <p>Черновцы</p>
+              <p>Ужгород</p>
+              <p>Луцк</p>
+              <p>Николаев</p>
+            </div>
+            <div class="list_cities">
+              <p>Полтава</p>
+              <p>Одеса</p>
+              <p>Житомир</p>
+              <p>Тернополь</p>
+            </div>
+            <div class="list_cities">
+              <p>Винница</p>
+              <p>Запорожье</p>
+              <p>Львов</p>
+              <p>Кривой Рог</p>
+            </div>
+          </div>
         </div>
+      </div>
+      <!-- cities -->
+      <!-- map -->
+      <div class="map">
+        <div class="container">
+          <h2>Карта станций</h2>
+          <div class="choose_city">
+              <p>Выберите город: </p>
+              <select class="select-css"> 
+                <option><i class="fas fa-sort-down"></i></option> 
+                <option>Харьков</option> 
+                <option>Киев</option> 
+                <option>Днепр</option> 
+                <option>Херсон</option> 
+              </select>
+          </div>
+           <div id="box">
+              <div class="settings_maps">
+                <div class="setting_maps_item">
+                  <h3>Масштабировать</h3>
+                  <a href=""><i class="fas fa-plus-circle"></i></a>
+                  <a href=""><i class="fas fa-minus-circle"></i></a>
+                </div>
+
+                <div class="setting_maps_item">
+                  <p>Показать:</p>
+                 <style>
+                .check__input:checked + .check__box {
+                    background-image: url(img/check.svg);
+                    color:#C1DB81;
+                }
+                </style> 
+                  <label class="check option">
+                      <input class="check__input" type="checkbox">
+                      <span class="check__box"></span>
+                      Велосипеды
+                  </label>
+                  <label class="check option">
+                      <input class="check__input" type="checkbox">
+                      <span class="check__box"></span>
+                      Самокаты
+                  </label>
+                  <label class="check option">
+                      <input class="check__input" type="checkbox">
+                      <span class="check__box"></span>
+                      Автомобили
+                  </label>
+    
+                </div>
+              </div>
+              <div class="map">
+                <img class="map_item"  src="./img/map.png" alt="">
+              </div>
+          </div>
+        </div>
+      </div>
+      <!-- finish map -->
     </div>
   </main>
+  <!-- finish main  -->
+  <footer class="footer">
+      <div class="footer__info">
+          <div class="footer_links">
+            <div class="social">
+              <div class="social_text">
+                <h4>Ми в соцcетях:</h4>
+              </div>
+              <div class="social_links">
+                <a href="#"><img src="img/gratis_png_logo_de_tweeter_icono_de_graficos_escalables_twitter.png" alt=""></a>
+                <a href="#"><img src="img/md_5a9797d18f418.png" alt=""></a>
+                <a href="#"><img src="img/w513h5131371296104Facebook.png" alt=""></a>
+              </div>
+            </div>
+          </div>
+          <div class="footer_text">
+            (с) 2020 Transport Sharing  <br>
+            Inc
+          </div>
+      </div>
+  </footer>
 </body>
 </html>
