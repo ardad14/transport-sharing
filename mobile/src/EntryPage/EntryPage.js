@@ -2,9 +2,11 @@ import React from 'react'
 import {Text, View, StyleSheet, TextInput, Image, TouchableOpacity} from 'react-native'
 import * as Font from 'expo-font'
 
+
 export const EntryPage = (props) =>
 {
     return (
+        
         <View style={styles.mainContainer}>  
             <Text style={styles.title}>Вход</Text>
             <TextInput style={styles.input} placeholder = 'Email/телефон'/>
@@ -19,6 +21,10 @@ export const EntryPage = (props) =>
             <TouchableOpacity style={styles.entrySocialButton}>
             <Image source={require('../img/facebook-icon-logo.png')} style={styles.icon} />
                 <Text style={styles.entrySocialButtonText}>Войти через Facebook</Text>
+            </TouchableOpacity>
+            <Text style={styles.registerTitle}>Ещё нет аккаунта?</Text>
+            <TouchableOpacity>
+                <Text style={styles.registerText}>Зарегистрироваться</Text>   
             </TouchableOpacity>
         </View>
 
@@ -42,7 +48,7 @@ const styles = StyleSheet.create
         color: '#FFFFFF',
         fontSize: 30,
         fontWeight: 'bold',
-        marginTop: 100,
+        marginTop: 125,
         //fontFamily: 'Alegreya'
     },
 
@@ -99,6 +105,19 @@ const styles = StyleSheet.create
         width: 25,
         height: 25,
                        
+    },
+
+    registerTitle: {
+        color: '#55692C',
+        marginTop: 20,
+
+    },
+
+    registerText: {
+        color: '#55692C',
+        fontSize: 16,
+        fontStyle: 'italic',
+        textDecorationLine: 'underline'
     }
 
 })
