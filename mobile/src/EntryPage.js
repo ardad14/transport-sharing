@@ -1,33 +1,37 @@
-import React from 'react'
-import {Text, View, StyleSheet, TextInput, Image, TouchableOpacity} from 'react-native'
-import * as Font from 'expo-font'
+import React from 'react';
+import {Text, View, StyleSheet, TextInput, Image, TouchableOpacity} from 'react-native';
+import * as Font from 'expo-font';
+import { BicyclePage } from './BicyclePage.js';
+import {Header} from './Header';
 
 
-export const EntryPage = (props) =>
+
+export const EntryPage = () =>
 {
     return (
-        
-        <View style={styles.mainContainer}>  
-            <Text style={styles.title}>Вход</Text>
-            <TextInput style={styles.input} placeholder = 'Email/телефон'/>
-            <TextInput style={styles.input} placeholder = 'Пароль'/>
-            <TouchableOpacity style={styles.entryButton}>
-                <Text style={styles.entryButonText}>Войти</Text>   
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.entrySocialButton}>
-                <Image source={require('../img/google-icon-logo.png')} style={styles.icon} />
-                <Text style={styles.entrySocialButtonText}>Войти через Google</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.entrySocialButton}>
-            <Image source={require('../img/facebook-icon-logo.png')} style={styles.icon} />
-                <Text style={styles.entrySocialButtonText}>Войти через Facebook</Text>
-            </TouchableOpacity>
-            <Text style={styles.registerTitle}>Ещё нет аккаунта?</Text>
-            <TouchableOpacity>
-                <Text style={styles.registerText}>Зарегистрироваться</Text>   
-            </TouchableOpacity>
+        <View>
+            <Header />
+            <View style={styles.mainContainer}>  
+                <Text style={styles.title}>Вход</Text>
+                <TextInput style={styles.input} placeholder = 'Email/телефон'/>
+                <TextInput style={styles.input} placeholder = 'Пароль'/>                     
+                <TouchableOpacity style={styles.entryButton} >
+                    <Text style={styles.entryButonText}>Войти</Text>                   
+                </TouchableOpacity>            
+                <TouchableOpacity style={styles.entrySocialButton}>
+                    <Image source={require('./img/google-icon-logo.png')} style={styles.icon} />
+                    <Text style={styles.entrySocialButtonText}>Войти через Google</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.entrySocialButton}>
+                <Image source={require('./img/facebook-icon-logo.png')} style={styles.icon} />
+                    <Text style={styles.entrySocialButtonText}>Войти через Facebook</Text>
+                </TouchableOpacity>
+                <Text style={styles.registerTitle}>Ещё нет аккаунта?</Text>
+                <TouchableOpacity>
+                    <Text style={styles.registerText}>Зарегистрироваться</Text>   
+                </TouchableOpacity>
+            </View>
         </View>
-
     )  
 }
 
