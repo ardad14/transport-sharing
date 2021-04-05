@@ -1,16 +1,18 @@
 import React from 'react';
 import {Text, View, StyleSheet, TextInput, Image, TouchableOpacity} from 'react-native';
 import * as Font from 'expo-font';
-import { BicyclePage } from './BicyclePage.js';
-import {Header} from './Header';
+
+
 
 
 
 export const EntryPage = () =>
 {
     return (
-        <View>
-            <Header />
+        <View style={styles.window}>
+            <View style={styles.header}>
+                <Text style={styles.text}>Transport Sharing</Text>
+            </View>
             <View style={styles.mainContainer}>  
                 <Text style={styles.title}>Вход</Text>
                 <TextInput style={styles.input} placeholder = 'Email/телефон'/>
@@ -37,15 +39,35 @@ export const EntryPage = () =>
 
 const styles = StyleSheet.create
 ({
+    window: {
+        paddingHorizontal: 10,
+        paddingVertical: 10
+    },
+
     mainContainer: {
-        height: '94%',
+        height: '92%',
         backgroundColor: '#C1DB81',
-        padding: 20,
-        marginTop: -5,
+        padding: 20,        
+        marginTop: 10,
         borderRadius: 10,
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center'
+    },
+
+    header: 
+    {
+        height: 50,
+        alignItems: 'center',
+        justifyContent: 'flex-end',       
+    },
+
+    text: 
+    {
+         color: '#C1DB81',
+         fontSize: 20,
+         fontWeight: 'bold',
+         //fontFamily: 'Alegreya'
     },
 
     title: {
