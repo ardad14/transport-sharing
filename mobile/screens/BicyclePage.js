@@ -4,7 +4,8 @@ import MapView, {PROVIDER_GOOGLE, Marker} from 'react-native-maps';
 
 
 
-export const BicyclePage = (props) => {
+export default function BicyclePage  (props) 
+{
 
     return (
         <View style={styles.window}>
@@ -16,8 +17,8 @@ export const BicyclePage = (props) => {
                     initialRegion={{
                     latitude: 50.00446267391827, 
                     longitude: 36.23569330615205,
-                    latitudeDelta: 0.004,
-                    longitudeDelta: 0.004,
+                    latitudeDelta: 0.015,
+                    longitudeDelta: 0.0121,
                     }}
                 >
                     <Marker 

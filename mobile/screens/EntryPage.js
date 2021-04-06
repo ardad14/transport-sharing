@@ -1,12 +1,10 @@
 import React from 'react';
 import {Text, View, StyleSheet, TextInput, Image, TouchableOpacity} from 'react-native';
 import * as Font from 'expo-font';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
-
-
-
-
-export const EntryPage = () =>
+export default function EntryPage  ({ navigation })
 {
     return (
         <View style={styles.window}>
@@ -17,15 +15,15 @@ export const EntryPage = () =>
                 <Text style={styles.title}>Вход</Text>
                 <TextInput style={styles.input} placeholder = 'Email/телефон'/>
                 <TextInput style={styles.input} placeholder = 'Пароль'/>                     
-                <TouchableOpacity style={styles.entryButton} >
+                <TouchableOpacity style={styles.entryButton} onPress={() => navigation.navigate('BicyclePage')}>
                     <Text style={styles.entryButonText}>Войти</Text>                   
                 </TouchableOpacity>            
                 <TouchableOpacity style={styles.entrySocialButton}>
-                    <Image source={require('./img/google-icon-logo.png')} style={styles.icon} />
+                    <Image source={require('../src/img/google-icon-logo.png')} style={styles.icon} />
                     <Text style={styles.entrySocialButtonText}>Войти через Google</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.entrySocialButton}>
-                <Image source={require('./img/facebook-icon-logo.png')} style={styles.icon} />
+                <Image source={require('../src/img/facebook-icon-logo.png')} style={styles.icon} />
                     <Text style={styles.entrySocialButtonText}>Войти через Facebook</Text>
                 </TouchableOpacity>
                 <Text style={styles.registerTitle}>Ещё нет аккаунта?</Text>
