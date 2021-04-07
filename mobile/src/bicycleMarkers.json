@@ -1,0 +1,28 @@
+[
+    {
+        "key": 1,
+        "latitude": 50.00575686837537,
+        "longitude": 36.235145387930835,
+        "title": "Xiaomi Mi Scooter Essential",
+        "descript": "Full charched"
+
+    },
+
+    {
+        "key": 2,                
+        "latitude": 50.00379980470324, 
+        "longitude": 36.236170639961685,        
+        "title": "Ninebot 9E",
+        "descript": "Full charched"
+    },
+
+    {
+        "key": 3,
+        "latitude": 50.002358557180955, 
+        "longitude": 36.23455058567605,                
+        "title": "Maxxter Teo",
+        "descript": "Full charched"
+    }
+
+    
+]

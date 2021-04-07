@@ -1,8 +1,9 @@
 import React from 'react';
-import {Text, View, Picker, StyleSheet, TextInput, Image, TouchableOpacity} from 'react-native';
+import {Text, View, StyleSheet, TextInput, Image, TouchableOpacity} from 'react-native';
 import * as Font from 'expo-font';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import {Picker} from '@react-native-picker/picker';
 
 export default function RegisterPage  ({ navigation })
 {
@@ -19,39 +20,10 @@ export default function RegisterPage  ({ navigation })
                 <TextInput style={styles.input} placeholder = 'Телефон'/> 
                 <Text style={styles.greytext}>Дата рождения:</Text>      
                 <Picker>
-                    <Picker.Item label="1" value="1"></Picker.Item>   
-                    <Picker.Item label="2" value="1"></Picker.Item> 
-                    <Picker.Item label="3" value="1"></Picker.Item> 
-                    <Picker.Item label="4" value="1"></Picker.Item> 
-                    <Picker.Item label="5" value="1"></Picker.Item> 
-                    <Picker.Item label="6" value="1"></Picker.Item> 
-                    <Picker.Item label="7" value="1"></Picker.Item> 
-                    <Picker.Item label="8" value="1"></Picker.Item> 
-                    <Picker.Item label="9" value="1"></Picker.Item> 
-                    <Picker.Item label="10" value="1"></Picker.Item> 
-                    <Picker.Item label="11" value="1"></Picker.Item> 
-                    <Picker.Item label="12" value="1"></Picker.Item> 
-                    <Picker.Item label="13" value="1"></Picker.Item> 
-                    <Picker.Item label="14" value="1"></Picker.Item> 
-                    <Picker.Item label="15" value="1"></Picker.Item> 
-                    <Picker.Item label="16" value="1"></Picker.Item> 
-                    <Picker.Item label="17" value="1"></Picker.Item> 
-                    <Picker.Item label="18" value="1"></Picker.Item> 
-                    <Picker.Item label="19" value="1"></Picker.Item> 
-                    <Picker.Item label="20" value="1"></Picker.Item> 
-                    <Picker.Item label="21" value="1"></Picker.Item> 
-                    <Picker.Item label="22" value="1"></Picker.Item> 
-                    <Picker.Item label="23" value="1"></Picker.Item> 
-                    <Picker.Item label="24" value="1"></Picker.Item> 
-                    <Picker.Item label="25" value="1"></Picker.Item> 
-                    <Picker.Item label="26" value="1"></Picker.Item> 
-                    <Picker.Item label="27" value="1"></Picker.Item> 
-                    <Picker.Item label="28" value="1"></Picker.Item> 
-                    <Picker.Item label="29" value="1"></Picker.Item> 
-                    <Picker.Item label="30" value="1"></Picker.Item> 
-                    <Picker.Item label="31" value="1"></Picker.Item> 
+                <   Picker.Item label="Java" value="java" />
+                    <Picker.Item label="JavaScript" value="js" />           
                 </Picker>  
-                <Picker>
+                {/*<Picker>
                     <Picker.Item label="январь" value=""></Picker.Item>    
                     <Picker.Item label="февраль" value=""></Picker.Item>  
                     <Picker.Item label="март" value=""></Picker.Item>  
@@ -91,7 +63,7 @@ export default function RegisterPage  ({ navigation })
                     <Picker.Item label="1900" value=""></Picker.Item> 
                     <Picker.Item label="1900" value=""></Picker.Item> 
                     <Picker.Item label="1900" value=""></Picker.Item>   
-                </Picker>          
+                </Picker> */}         
                 <TouchableOpacity style={styles.entryButton} onPress={() => navigation.navigate('BicyclePage')}>
                     <Text style={styles.entryButonText}>Войти</Text>                   
                 </TouchableOpacity>            

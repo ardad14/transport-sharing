@@ -1,11 +1,13 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
-import MapView, {PROVIDER_GOOGLE, Marker} from 'react-native-maps';
-
-
+import MapView, {PROVIDER_GOOGLE, Marker, Callout} from 'react-native-maps';
+import locations from '../src/bicycleMarkers.json';
 
 export default function BicyclePage  (props) 
 {
+    state = {
+        markers: locations        
+    }
 
     return (
         <View style={styles.window}>
@@ -14,6 +16,7 @@ export default function BicyclePage  (props)
             </View>
             <View style={styles.mapContainer}>
                 <MapView style={styles.map}
+                    showsUserLocation
                     initialRegion={{
                     latitude: 50.00446267391827, 
                     longitude: 36.23569330615205,
@@ -21,13 +24,31 @@ export default function BicyclePage  (props)
                     longitudeDelta: 0.0121,
                     }}
                 >
-                    <Marker 
-                        coordinate={{
-                            latitude: 50.00575686837537,
-                            longitude: 36.235145387930835,
-                        }}
-                        title="First bike"
-                    />
+                    {
+                        state.markers.map(marker =>(
+                            <Marker
+                            key={marker.key} 
+                            coordinate={{
+                                latitude: marker.latitude,
+                                longitude: marker.longitude,
+                            }}
+                            icon={require('../src/img/bike_icon.png')}
+                            >
+                                <Callout tooltip>
+                                    <View>
+                                        <View style={styles.infoField}>
+                                            <Text style={styles.bikeName}>{marker.title}</Text>
+                                            <Text >{marker.descript}</Text>
+                                        </View>
+                                    </View>
+                                </Callout>
+                            </Marker>
+
+
+                        ))
+                    }
+
+                    
                     
                 </MapView>
             </View>
@@ -73,5 +94,23 @@ const styles = StyleSheet.create
     map: 
     {
         ...StyleSheet.absoluteFillObject,
+    },
+
+    infoField: 
+    {
+        flexDirection: 'row',
+        alignSelf: 'flex-start',
+        backgroundColor: '#fff',
+        borderRadius: 6,
+        borderColor: '#ccc',
+        borderWidth: 0.5,
+        padding: 15,
+        width: 150
+    },
+
+    bikeName: 
+    {
+        fontSize: 16,
+        marginBottom: 5
     }
 })

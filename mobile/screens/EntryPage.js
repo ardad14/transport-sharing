@@ -27,7 +27,7 @@ export default function EntryPage  ({ navigation })
                     <Text style={styles.entrySocialButtonText}>Войти через Facebook</Text>
                 </TouchableOpacity>
                 <Text style={styles.registerTitle}>Ещё нет аккаунта?</Text>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('RegisterPage')}>
                     <Text style={styles.registerText}>Зарегистрироваться</Text>   
                 </TouchableOpacity>
             </View>
