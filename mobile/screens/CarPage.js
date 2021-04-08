@@ -4,7 +4,7 @@ import MapView, {PROVIDER_GOOGLE, Marker, Callout} from 'react-native-maps';
 import locations from '../src/bicycleMarkers.json';
 import VehicleNavigator from '../routes/VehicleNavigator.js';
 
-export default function BicyclePage  ({navigation}) 
+export default function CarPage  ({navigation}) 
 {
     state = {
         markers: locations        
@@ -33,7 +33,7 @@ export default function BicyclePage  ({navigation})
                                 latitude: marker.latitude,
                                 longitude: marker.longitude,
                             }}
-                            icon={require('../src/img/bike_icon.png')}
+                            icon={require('../src/img/car_icon.png')}
                             >
                                 <Callout tooltip>
                                     <View>
@@ -53,7 +53,7 @@ export default function BicyclePage  ({navigation})
                 
             </View>
             <View style={styles.buttonContainer}>
-                    <TouchableOpacity style={styles.toBicyclePage} >
+                    <TouchableOpacity style={styles.toBicyclePage} onPress={() => navigation.navigate('BicyclePage')}>
                         <Image style={styles.buttonImage} source={require('../src/img/white-bike-navb.png')}/>
                         <Text style={styles.buttonText}>Карта велосипедов</Text>                   
                     </TouchableOpacity>
@@ -61,7 +61,7 @@ export default function BicyclePage  ({navigation})
                         <Image style={styles.ScooterImage} source={require('../src/img/green-scooter-navb.png')}/>
                         <Text style={styles.buttonScooterText}>Карта самокатов</Text>                   
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.toCarPage} onPress={() => navigation.navigate('CarPage')}>
+                    <TouchableOpacity style={styles.toCarPage} >
                         <Image style={styles.CarImage} source={require('../src/img/green-car-navb.png')}/>
                         <Text style={styles.buttonCarText}>Карта автомобилей</Text>                   
                     </TouchableOpacity>
@@ -148,14 +148,14 @@ const styles = StyleSheet.create
         width: '30%',
         height: '100%',
         alignItems: "center",
-        backgroundColor: "#C1DB81",
+        backgroundColor: "#ffffff",
         marginRight: 20,
         justifyContent: 'center',
         borderRadius: 7,
         textAlign: 'center',
 
     },
-    
+
     toScooterPage: 
     {
         width: '30%',
@@ -171,7 +171,7 @@ const styles = StyleSheet.create
         width: '30%',
         height: '100%',
         alignItems: "center",
-        backgroundColor: "#fff",        
+        backgroundColor: "#C1DB81",        
         justifyContent: 'center',
         borderRadius: 7,
         marginLeft: 20,
@@ -211,7 +211,6 @@ const styles = StyleSheet.create
        
         width: 50,
         height: 45,
-    },
-
+    },  
     
 })

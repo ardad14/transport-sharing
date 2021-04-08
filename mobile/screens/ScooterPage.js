@@ -4,7 +4,8 @@ import MapView, {PROVIDER_GOOGLE, Marker, Callout} from 'react-native-maps';
 import locations from '../src/bicycleMarkers.json';
 import VehicleNavigator from '../routes/VehicleNavigator.js';
 
-export default function BicyclePage  ({navigation}) 
+
+export default function ScooterPage  ({navigation}) 
 {
     state = {
         markers: locations        
@@ -33,7 +34,7 @@ export default function BicyclePage  ({navigation})
                                 latitude: marker.latitude,
                                 longitude: marker.longitude,
                             }}
-                            icon={require('../src/img/bike_icon.png')}
+                            icon={require('../src/img/scooter_icon.png')}
                             >
                                 <Callout tooltip>
                                     <View>
@@ -53,12 +54,12 @@ export default function BicyclePage  ({navigation})
                 
             </View>
             <View style={styles.buttonContainer}>
-                    <TouchableOpacity style={styles.toBicyclePage} >
-                        <Image style={styles.buttonImage} source={require('../src/img/white-bike-navb.png')}/>
+                    <TouchableOpacity style={styles.toBicyclePage} onPress={() => navigation.navigate('BicyclePage')}>
+                        <Image style={styles.buttonImage} source={require('../src/img/green-bike-navb.png')}/>
                         <Text style={styles.buttonText}>Карта велосипедов</Text>                   
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.toScooterPage} onPress={() => navigation.navigate('ScooterPage')}>
-                        <Image style={styles.ScooterImage} source={require('../src/img/green-scooter-navb.png')}/>
+                    <TouchableOpacity style={styles.toScooterPage} >
+                        <Image style={styles.ScooterImage} source={require('../src/img/white-scooter-navb.png')}/>
                         <Text style={styles.buttonScooterText}>Карта самокатов</Text>                   
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.toCarPage} onPress={() => navigation.navigate('CarPage')}>
@@ -148,20 +149,20 @@ const styles = StyleSheet.create
         width: '30%',
         height: '100%',
         alignItems: "center",
-        backgroundColor: "#C1DB81",
+        backgroundColor: "#ffffff",
         marginRight: 20,
         justifyContent: 'center',
         borderRadius: 7,
         textAlign: 'center',
 
     },
-    
+
     toScooterPage: 
     {
         width: '30%',
         height: '100%',
         alignItems: "center",
-        backgroundColor: "#fff",        
+        backgroundColor: "#C1DB81",        
         justifyContent: 'center',
         borderRadius: 7,
     },   
@@ -211,7 +212,6 @@ const styles = StyleSheet.create
        
         width: 50,
         height: 45,
-    },
-
+    },    
     
 })
