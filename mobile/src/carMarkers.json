@@ -14,8 +14,8 @@
         "key": 2,                
         "latitude": 49.979262267262925,  
         "longitude": 36.23042068849774,        
-        "title": "Hyundai Sonata",
-        "year": "2016",
+        "title": "Toyota Camry",
+        "year": "2015",
         "car_number": "ХА8323СE"
         
     },
@@ -24,8 +24,8 @@
         "key": 3,
         "latitude": 49.989581153818, 
         "longitude": 36.20720709017879,        
-        "title": "Renault Megane",
-        "year": "2011",
+        "title": "Toyota Camry",
+        "year": "2015",
         "car_number": "ХА6543BM"
         
     },
@@ -34,8 +34,8 @@
         "key": 4,
         "latitude": 49.99436174283881,
         "longitude": 36.222416488629996,        
-        "title": "Renault Duster",
-        "year": "2020",
+        "title": "Hyundai Sonata",
+        "year": "2014",
         "car_number": "ХА9394BM"
         
     },
@@ -44,8 +44,8 @@
         "key": 5,
         "latitude": 50.00367975771653,
         "longitude": 36.229527881477324,        
-        "title": "Nissan Leaf",
-        "year": "2013",
+        "title": "Hyundai Sonata",
+        "year": "2020",
         "car_number": "ХА0023BM"
         
     },
@@ -54,9 +54,9 @@
         "key": 6,
         "latitude": 50.00367975771653,
         "longitude": 36.229527881477324,        
-        "title": "Nissan Leaf",
+        "title": "Hyundai Sonata",
         "year": "2013",
-        "car_number": "ХА0023BA"
+        "car_number": "ХА0853BA"
         
     },
 
@@ -64,7 +64,7 @@
         "key": 7,
         "latitude": 50.014012785751106, 
         "longitude": 36.22702165642516,    
-        "title": "Kia Ceed",
+        "title": "Renault Megane",
         "year": "2011",
         "car_number": "ХА0803XC"
         
@@ -74,8 +74,8 @@
         "key": 8,
         "latitude": 50.02876864337846, 
         "longitude": 36.2218622340454,    
-        "title": "Kia Optima",
-        "year": "2019",
+        "title": "Renault Megane",
+        "year": "2012",
         "car_number": "ХА5912HT"
         
     },
@@ -84,7 +84,7 @@
         "key": 9,
         "latitude": 50.038137595182135, 
         "longitude": 36.22135520705339,    
-        "title": "Kia Rio",
+        "title": "Nissan Leaf",
         "year": "2012",
         "car_number": "ХА4872CP"
         
@@ -94,7 +94,7 @@
         "key": 10,
         "latitude": 49.99924498811387, 
         "longitude": 36.242595549113425,     
-        "title": "Kia Sorento",
+        "title": "Nissan Leaf",
         "year": "2017",
         "car_number": "ХА0080PX"
         
@@ -104,8 +104,8 @@
         "key": 11,
         "latitude": 49.9980105787973, 
         "longitude": 36.27260446171994,     
-        "title": "Kia Carens",
-        "year": "2007",
+        "title": "Kia Ceed",
+        "year": "2011",
         "car_number": "ХА6934EI"
         
     },
@@ -114,8 +114,8 @@
         "key": 12,
         "latitude": 49.99889703319734, 
         "longitude": 36.30208383750705,     
-        "title": "Toyota Corolla",
-        "year": "2005",
+        "title": "Kia Ceed",
+        "year": "2014",
         "car_number": "ХА7579HI"
         
     },
@@ -124,8 +124,8 @@
         "key": 13,
         "latitude": 50.008109147443385, 
         "longitude": 36.32289837805697,     
-        "title": "Toyota Venza",
-        "year": "2010",
+        "title": "Kia Ceed",
+        "year": "2015",
         "car_number": "ХА8721PO"
         
     },
@@ -134,7 +134,7 @@
         "key": 14,
         "latitude": 50.01965459747442,
         "longitude": 36.32240656043985,    
-        "title": "Toyota Avensis",
+        "title": "Kia Optima",
         "year": "2009",
         "car_number": "ХА0321УК"
         
@@ -144,7 +144,7 @@
         "key": 15,
         "latitude": 50.00855492709324, 
         "longitude": 36.22051821258952,    
-        "title": "Toyota Prius",
+        "title": "Kia Optima",
         "year": "2012",
         "car_number": "ХА8354CH"
         
@@ -154,7 +154,7 @@
         "key": 16,
         "latitude": 50.002767608593786,  
         "longitude": 36.23522175849931,   
-        "title": "Volkswagen Passat",
+        "title": "Kia Optima",
         "year": "2017",
         "car_number": "ХА9209TI"
         
@@ -164,7 +164,7 @@
         "key": 17,
         "latitude": 49.986598504417024,  
         "longitude": 36.24079429102825,   
-        "title": "Volkswagen Golf",
+        "title": "Kia Rio",
         "year": "2015",
         "car_number": "ХА7709CP"
         
@@ -174,7 +174,7 @@
         "key": 18,
         "latitude": 49.9987331314352,
         "longitude": 36.27223536884811,    
-        "title": "Volkswagen Jetta",
+        "title": "Kia Rio",
         "year": "2010",
         "car_number": "ХА2052KT"
         
@@ -184,7 +184,7 @@
         "key": 19,
         "latitude": 49.99275537405239, 
         "longitude": 36.239573680244796,     
-        "title": "Volkswagen Polo",
+        "title": "Kia Carens",
         "year": "2019",
         "car_number": "ХА6744IA"
         
@@ -194,7 +194,7 @@
         "key": 20,
         "latitude": 50.007283889271704, 
         "longitude": 36.25037445508748,     
-        "title": "Toyota Altis",
+        "title": "Kia Carens",
         "year": "2007",
         "car_number": "ХА4998MO"
         
@@ -204,7 +204,7 @@
         "key": 21,
         "latitude": 49.98234844194903,  
         "longitude": 36.26036213505542,      
-        "title": "Toyota Belta",
+        "title": "Kia Carens",
         "year": "2011",
         "car_number": "ХА7603AA"
         
@@ -214,7 +214,7 @@
         "key": 22,
         "latitude": 49.98657999244553, 
         "longitude": 36.17426433581988,       
-        "title": "Volkswagen Touareg",
+        "title": "Toyota Coroll",
         "year": "2016",
         "car_number": "ХА0083XH"
         
@@ -224,7 +224,7 @@
         "key": 23,
         "latitude": 49.97938684529023, 
         "longitude": 36.28164953989401,       
-        "title": "Volkswagen Arteon",
+        "title": "Toyota Coroll",
         "year": "2020",
         "car_number": "XA6654AC"
         
@@ -234,7 +234,7 @@
         "key": 24,
         "latitude": 49.984380121832196, 
         "longitude": 36.31925410678308,       
-        "title": "Nissan Almera",
+        "title": "Volkswagen Passat",
         "year": "2017",
         "car_number": "XA3759CB"
         
@@ -244,7 +244,7 @@
         "key": 25,
         "latitude": 50.022439865427344,  
         "longitude": 36.23332351736236,       
-        "title": "Nissan Cima",
+        "title": "Volkswagen Passat",
         "year": "2012",
         "car_number": "XA7354TA"
         
@@ -254,7 +254,7 @@
         "key": 26,
         "latitude": 50.02425408682804,  
         "longitude": 36.250239304966904,      
-        "title": "Nissan Fuga",
+        "title": "Volkswagen Golf",
         "year": "2013",
         "car_number": "XA4432УР"
         
@@ -264,9 +264,39 @@
         "key": 27,
         "latitude": 49.96667615686418, 
         "longitude": 36.339043503549945,      
-        "title": "Renault",
-        "year": "Logan",
-        "car_number": "XA1246O"
+        "title": "Renault Logan",
+        "year": "2016",
+        "car_number": "XA1246ЛН"
+        
+    },
+
+    {
+        "key": 28,
+        "latitude": 50.00002362470878, 
+        "longitude": 36.25718773088082,       
+        "title": "Renault Logan",
+        "year": "2013",
+        "car_number": "XA5023КФ"
+        
+    },
+
+    {
+        "key": 29, 
+        "latitude": 49.96906997449593, 
+        "longitude": 36.29816262319048,      
+        "title": "Volkswagen Golf",
+        "year": "2011",
+        "car_number": "XA0485КЕ"
+        
+    },
+
+    {
+        "key": 30, 
+        "latitude": 49.96459586816365, 
+        "longitude": 36.329665521146,      
+        "title": "Volkswagen Golf",
+        "year": "2019",
+        "car_number": "XA5735РО"
         
     }
     
