@@ -88,27 +88,7 @@
         "type": "fast",
         "charge": "100",
         "descript": "Full charched"
-    },
-
-    {
-        "key": 9,                
-        "latitude": 49.98543005167823,  
-        "longitude": 36.28073217775838,         
-        "title": "Like.Bike One Max",
-        "type": "fast",
-        "charge": "100",
-        "descript": "Full charched"
-    },
-
-    {
-        "key": 9,                
-        "latitude": 49.98543005167823,  
-        "longitude": 36.28073217775838,         
-        "title": "Like.Bike One Max",
-        "type": "fast",
-        "charge": "100",
-        "descript": "Full charched"
-    },
+    },    
 
     {
         "key": 10,                
@@ -318,7 +298,26 @@
         "type": "fast",
         "charge": "100",
         "descript": "Full charched"
-    }
-    
+    },
+
+    {
+        "key": 31,                
+        "latitude": 49.98543005167823,  
+        "longitude": 36.28073217775838,         
+        "title": "Like.Bike One Max",
+        "type": "fast",
+        "charge": "100",
+        "descript": "Full charched"
+    },
+
+    {
+        "key": 32,                
+        "latitude": 49.98543005167823,  
+        "longitude": 36.28073217775838,         
+        "title": "Like.Bike One Max",
+        "type": "fast",
+        "charge": "100",
+        "descript": "Full charched"
+    }    
     
 ]

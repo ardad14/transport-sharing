@@ -1,28 +1,109 @@
 [
     {
         "key": 1,
-        "latitude": 50.00575686837537,
-        "longitude": 36.235145387930835,
-        "title": "Xiaomi Mi Scooter Essential",
-        "descript": "Full charched"
-
+        "latitude": 50.01230213498797, 
+        "longitude": 36.22691724871514,
+        "title": "Станция №1",
+        "amount": 7
     },
 
     {
         "key": 2,                
-        "latitude": 50.00379980470324, 
-        "longitude": 36.236170639961685,        
-        "title": "Ninebot 9E",
-        "descript": "Full charched"
+        "latitude": 50.00470035501542,  
+        "longitude": 36.234849258363,       
+        "title": "Станция №2",
+        "amount": 7
     },
 
     {
         "key": 3,
-        "latitude": 50.002358557180955, 
-        "longitude": 36.23455058567605,                
-        "title": "Maxxter Teo",
-        "descript": "Full charched"
+        "latitude": 49.992768074098265,  
+        "longitude": 36.23175690094357,               
+        "title": "Станция №3",
+        "amount": 7
+    },
+    {
+        "key": 4,
+        "latitude": 49.988575580804174,   
+        "longitude": 36.240360424289875,               
+        "title": "Станция №4",
+        "amount": 7
+    },
+    {
+        "key": 5,
+        "latitude": 50.00181073667674, 
+        "longitude": 36.27069269085451,               
+        "title": "Станция №5",
+        "amount": 7
+    },
+    {
+        "key": 6,
+        "latitude": 49.9817829942451,   
+        "longitude": 36.255096343124585,                
+        "title": "Станция №6",
+        "amount": 7
+    },
+    {
+        "key": 7,
+        "latitude": 49.98037037362236,   
+        "longitude": 36.24492960682746,              
+        "title": "Станция №7",
+        "amount": 7
+    },
+    {
+        "key": 8,
+        "latitude": 50.00809018606967,   
+        "longitude": 36.252539391196585,             
+        "title": "Станция №8",
+        "amount": 7
+    },
+    {
+        "key": 9,
+        "latitude": 50.06017570052546,  
+        "longitude": 36.20093266841186,               
+        "title": "Станция №9",
+        "amount": 7
+    },
+    {
+        "key": 10,
+        "latitude": 50.02105237616398, 
+        "longitude": 36.21235424231921,               
+        "title": "Станция №10",
+        "amount": 7
+    },
+    {
+        "key": 11,
+        "latitude": 49.94621024521196, 
+        "longitude": 36.39693175487228,               
+        "title": "Станция №11",
+        "amount": 7
+    },
+    {
+        "key": 12,
+        "latitude": 50.02421911170297, 
+        "longitude": 36.336944263135386,               
+        "title": "Станция №12",
+        "amount": 7
+    },
+    {
+        "key": 13,
+        "latitude": 49.985758193767296,   
+        "longitude": 36.1911973215112,               
+        "title": "Станция №13",
+        "amount": 7
+    },
+    {
+        "key": 14,
+        "latitude": 49.942526991596765, 
+        "longitude": 36.24154699614598,               
+        "title": "Станция №14",
+        "amount": 7
+    },
+    {
+        "key": 15,
+        "latitude": 50.04521618602871,  
+        "longitude": 36.2750194105946,               
+        "title": "Станция №15",
+        "amount": 7
     }
-
-    
 ]

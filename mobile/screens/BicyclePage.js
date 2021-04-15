@@ -1,18 +1,47 @@
 import React from 'react';
-import {View, Text, StyleSheet, TouchableOpacity, Image} from 'react-native';
+import {View, Text, StyleSheet, TouchableOpacity, Image, Pressable, Modal} from 'react-native';
 import MapView, {PROVIDER_GOOGLE, Marker, Callout} from 'react-native-maps';
 import locations from '../src/bicycleMarkers.json';
 import VehicleNavigator from '../routes/VehicleNavigator.js';
 
+
+{/*function modalMenu (...props)
+{
+    return (
+    <Modal>
+                <View style={styles.modalMenu}>
+                    {
+                    state.markers.map(marker => (
+                        <Text
+                        key={marker.key}
+                        style={styles.stationNumber}>{marker.title}</Text> 
+
+                    ))
+
+                    }
+                               
+                </View>
+            </Modal>
+    );
+}*/}
+
 export default function BicyclePage  ({navigation}) 
 {
     state = {
-        markers: locations        
+        markers: locations,
+        modalVisible: false        
     }
+
+    /*this.setModalVisible = (visible) => {
+        this.setState({ modalVisible: visible });
+      }*/
 
     return (
         <View style={styles.window}>
             <View style={styles.header}>
+                <Pressable onPress = {() => navigation.dispatch(DrawerActions.openDrawer())}>
+                    <Image style={styles.navbarImage}source={require('../src/img/navbar-icon.png')}/>  
+                </Pressable> 
                 <Text style={styles.text}>Transport Sharing</Text>
             </View>
             <View style={styles.mapContainer}>
@@ -52,6 +81,7 @@ export default function BicyclePage  ({navigation})
                 </MapView>             
                 
             </View>
+            
             <View style={styles.buttonContainer}>
                     <TouchableOpacity style={styles.toBicyclePage} >
                         <Image style={styles.buttonImage} source={require('../src/img/white-bike-navb.png')}/>
@@ -79,11 +109,21 @@ const styles = StyleSheet.create
         backgroundColor: '#fff'
     },
 
+    navbarImage:
+    {
+        width: 45,
+        height: 45,
+    },
+
     header: 
     {
-        height: 50,
+        flexDirection: 'row',
+        height: 25,
         alignItems: 'center',
-        justifyContent: 'flex-end',       
+        //justifyContent: 'space-around',
+        marginTop: 35,
+        marginLeft: -5,
+
     },
 
     text: 
@@ -92,12 +132,13 @@ const styles = StyleSheet.create
          fontSize: 20,
          fontWeight: 'bold',
          //fontFamily: 'Alegreya'
+         marginLeft: 65,
     },
 
     mapContainer: 
     {
         
-        height: '79%',        
+        height: '78%',        
         padding: 20,        
         marginTop: 10,
         borderRadius: 10,
@@ -211,6 +252,21 @@ const styles = StyleSheet.create
        
         width: 50,
         height: 45,
+    },
+
+    modalMenu: 
+    {
+        height: '50%',
+        width: '100%',
+        borderTopLeftRadius: 10,
+        borderTopRightRadius: 10,
+        backgroundColor: "#C1DB81",
+
+    },
+
+    stationNumber:
+    {
+
     },
 
     

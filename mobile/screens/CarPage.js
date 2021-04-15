@@ -1,8 +1,9 @@
 import React from 'react';
-import {View, Text, StyleSheet, TouchableOpacity, Image} from 'react-native';
+import {View, Text, StyleSheet, TouchableOpacity, Image, Pressable} from 'react-native';
 import MapView, {PROVIDER_GOOGLE, Marker, Callout} from 'react-native-maps';
-import locations from '../src/bicycleMarkers.json';
-import VehicleNavigator from '../routes/VehicleNavigator.js';
+import locations from '../src/carMarkers.json';
+import {DrawerActions} from '@react-navigation/native';
+
 
 export default function CarPage  ({navigation}) 
 {
@@ -13,6 +14,9 @@ export default function CarPage  ({navigation})
     return (
         <View style={styles.window}>
             <View style={styles.header}>
+                <Pressable onPress = {() => navigation.dispatch(DrawerActions.openDrawer())}>
+                    <Image style={styles.navbarImage}source={require('../src/img/navbar-icon.png')}/>  
+                </Pressable> 
                 <Text style={styles.text}>Transport Sharing</Text>
             </View>
             <View style={styles.mapContainer}>
@@ -54,36 +58,46 @@ export default function CarPage  ({navigation})
             </View>
             <View style={styles.buttonContainer}>
                     <TouchableOpacity style={styles.toBicyclePage} onPress={() => navigation.navigate('BicyclePage')}>
-                        <Image style={styles.buttonImage} source={require('../src/img/white-bike-navb.png')}/>
-                        <Text style={styles.buttonText}>Карта велосипедов</Text>                   
+                        <Image style={styles.BicycleImage} source={require('../src/img/green-bike-navb.png')}/>
+                        <Text style={styles.BicycleText}>Карта велосипедов</Text>                   
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.toScooterPage} onPress={() => navigation.navigate('ScooterPage')}>
                         <Image style={styles.ScooterImage} source={require('../src/img/green-scooter-navb.png')}/>
                         <Text style={styles.buttonScooterText}>Карта самокатов</Text>                   
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.toCarPage} >
-                        <Image style={styles.CarImage} source={require('../src/img/green-car-navb.png')}/>
+                        <Image style={styles.CarImage} source={require('../src/img/white-car-navb.png')}/>
                         <Text style={styles.buttonCarText}>Карта автомобилей</Text>                   
                     </TouchableOpacity>
             </View>
         </View>
-    )
+    );
 
 }
 
-const styles = StyleSheet.create
-({
+const styles = StyleSheet.create ({
+
     window: {
         paddingHorizontal: 10,
         paddingVertical: 10,
         backgroundColor: '#fff'
     },
 
+    navbarImage:
+    {
+        width: 45,
+        height: 45,
+    },
+
     header: 
     {
-        height: 50,
+        flexDirection: 'row',
+        height: 25,
         alignItems: 'center',
-        justifyContent: 'flex-end',       
+        //justifyContent: 'space-around',
+        marginTop: 35,
+        marginLeft: -5,
+
     },
 
     text: 
@@ -92,12 +106,13 @@ const styles = StyleSheet.create
          fontSize: 20,
          fontWeight: 'bold',
          //fontFamily: 'Alegreya'
+         marginLeft: 65,
     },
 
     mapContainer: 
     {
         
-        height: '79%',        
+        height: '78%',        
         padding: 20,        
         marginTop: 10,
         borderRadius: 10,
@@ -155,7 +170,7 @@ const styles = StyleSheet.create
         textAlign: 'center',
 
     },
-
+    
     toScooterPage: 
     {
         width: '30%',
@@ -177,7 +192,7 @@ const styles = StyleSheet.create
         marginLeft: 20,
     },
 
-    buttonText: 
+    BicycleText: 
     {
         marginTop: 5,
         textAlign: 'center',
@@ -194,7 +209,7 @@ const styles = StyleSheet.create
         textAlign: 'center',
     },
 
-    buttonImage: 
+    BicycleImage: 
     {
         width: 60,
         height: 35,
@@ -207,10 +222,10 @@ const styles = StyleSheet.create
     },
 
     CarImage:
-    {
-       
+    {       
         width: 50,
-        height: 45,
-    },  
+        height: 30,
+    },
+
     
 })

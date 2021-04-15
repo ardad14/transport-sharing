@@ -1,13 +1,19 @@
-import * as React from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
+import React from 'react';
+import { View, Button, Text } from 'react-native';
+import { NavigationContainer, DrawerActions } from '@react-navigation/native';
+import {
+  createDrawerNavigator,
+  
+} from '@react-navigation/drawer';
+
 import AppNavigator from './routes/AppNavigator.js';
 
 
-
-export default function App() {
-
-  return (
-    <AppNavigator />
-  );
+export default class App extends React.Component {
+  
+  render() {
+    return (
+      <AppNavigator />
+    );
+  }
 }
-
