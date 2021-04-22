@@ -2,7 +2,8 @@ import React from 'react';
 import {View, Text, StyleSheet, TouchableOpacity, Image, Pressable, Modal} from 'react-native';
 import MapView, {PROVIDER_GOOGLE, Marker, Callout} from 'react-native-maps';
 import locations from '../src/bicycleMarkers.json';
-import VehicleNavigator from '../routes/VehicleNavigator.js';
+import { DrawerActions } from '@react-navigation/drawer';
+
 
 
 {/*function modalMenu (...props)
@@ -25,79 +26,85 @@ import VehicleNavigator from '../routes/VehicleNavigator.js';
     );
 }*/}
 
-export default function BicyclePage  ({navigation}) 
-{
-    state = {
-        markers: locations,
-        modalVisible: false        
-    }
 
+
+
+
+export default class BicyclePage extends React.Component {
+
+    constructor() {
+        super()
+        this.state = {
+            markers: locations,
+            modalVisible: false        
+        }
+    } 
     /*this.setModalVisible = (visible) => {
         this.setState({ modalVisible: visible });
       }*/
 
-    return (
-        <View style={styles.window}>
-            <View style={styles.header}>
-                <Pressable onPress = {() => navigation.dispatch(DrawerActions.openDrawer())}>
-                    <Image style={styles.navbarImage}source={require('../src/img/navbar-icon.png')}/>  
-                </Pressable> 
-                <Text style={styles.text}>Transport Sharing</Text>
-            </View>
-            <View style={styles.mapContainer}>
-                <MapView style={styles.map}
-                    showsUserLocation
-                    initialRegion={{
-                    latitude: 50.00446267391827, 
-                    longitude: 36.23569330615205,
-                    latitudeDelta: 0.015,
-                    longitudeDelta: 0.0121,
-                    }}
-                >
-                    {
-                        state.markers.map(marker =>(
-                            <Marker
-                            key={marker.key} 
-                            coordinate={{
-                                latitude: marker.latitude,
-                                longitude: marker.longitude,
-                            }}
-                            icon={require('../src/img/bike_icon.png')}
-                            >
-                                <Callout tooltip>
-                                    <View>
-                                        <View style={styles.infoField}>
-                                            <Text style={styles.bikeName}>{marker.title}</Text>
-                                            <Text >{marker.descript}</Text>
+    render() {
+        return (
+            <View style={styles.window}>
+                <View style={styles.header}>
+                    <Pressable onPress={() => this.props.navigation.toggleDrawer()}>
+                        <Image style={styles.navbarImage}source={require('../src/img/navbar-icon.png')}/>  
+                    </Pressable> 
+                    <Text style={styles.text}>Transport Sharing</Text>
+                </View>
+                <View style={styles.mapContainer}>
+                    <MapView style={styles.map}
+                        showsUserLocation
+                        initialRegion={{
+                        latitude: 50.00446267391827, 
+                        longitude: 36.23569330615205,
+                        latitudeDelta: 0.015,
+                        longitudeDelta: 0.0121,
+                        }}
+                    >
+                        {
+                            this.state.markers.map(marker =>(
+                                <Marker
+                                key={marker.key} 
+                                coordinate={{
+                                    latitude: marker.latitude,
+                                    longitude: marker.longitude,
+                                }}
+                                icon={require('../src/img/bike_icon.png')}
+                                >
+                                    <Callout tooltip>
+                                        <View>
+                                            <View style={styles.infoField}>
+                                                <Text style={styles.bikeName}>{marker.title}</Text>
+                                                <Text >{marker.descript}</Text>
+                                            </View>
                                         </View>
-                                    </View>
-                                </Callout>
-                            </Marker>
-
-
-                        ))
-                    }               
+                                    </Callout>
+                                </Marker>
+                            ))
+                        }               
+                        
+                    </MapView>             
                     
-                </MapView>             
+                </View>
                 
+                <View style={styles.buttonContainer}>
+                        <TouchableOpacity style={styles.toBicyclePage} >
+                            <Image style={styles.buttonImage} source={require('../src/img/white-bike-navb.png')}/>
+                            <Text style={styles.buttonText}>Карта велосипедов</Text>                   
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.toScooterPage} onPress={() => this.props.navigation.navigate('ScooterPage')}>
+                            <Image style={styles.ScooterImage} source={require('../src/img/green-scooter-navb.png')}/>
+                            <Text style={styles.buttonScooterText}>Карта самокатов</Text>                   
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.toCarPage} onPress={() => this.props.navigation.navigate('CarPage')}>
+                            <Image style={styles.CarImage} source={require('../src/img/green-car-navb.png')}/>
+                            <Text style={styles.buttonCarText}>Карта автомобилей</Text>                   
+                        </TouchableOpacity>
+                </View>
             </View>
-            
-            <View style={styles.buttonContainer}>
-                    <TouchableOpacity style={styles.toBicyclePage} >
-                        <Image style={styles.buttonImage} source={require('../src/img/white-bike-navb.png')}/>
-                        <Text style={styles.buttonText}>Карта велосипедов</Text>                   
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.toScooterPage} onPress={() => navigation.navigate('ScooterPage')}>
-                        <Image style={styles.ScooterImage} source={require('../src/img/green-scooter-navb.png')}/>
-                        <Text style={styles.buttonScooterText}>Карта самокатов</Text>                   
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.toCarPage} onPress={() => navigation.navigate('CarPage')}>
-                        <Image style={styles.CarImage} source={require('../src/img/green-car-navb.png')}/>
-                        <Text style={styles.buttonCarText}>Карта автомобилей</Text>                   
-                    </TouchableOpacity>
-            </View>
-        </View>
-    )
+        );
+    }   
 
 }
 
@@ -113,6 +120,7 @@ const styles = StyleSheet.create
     {
         width: 45,
         height: 45,
+        marginLeft: 20,
     },
 
     header: 
@@ -132,24 +140,26 @@ const styles = StyleSheet.create
          fontSize: 20,
          fontWeight: 'bold',
          //fontFamily: 'Alegreya'
-         marginLeft: 65,
+         marginLeft: 35,
     },
 
     mapContainer: 
-    {
-        
-        height: '78%',        
-        padding: 20,        
+    {        
+        height: '78%',
+        width: '98%',
+        borderRadius: 25,
+        overflow: 'hidden',        
         marginTop: 10,
-        borderRadius: 10,
         flexDirection: 'column',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        alignSelf: 'center'
     },
 
     map: 
     {
         ...StyleSheet.absoluteFillObject,
+       
     },
 
     infoField: 

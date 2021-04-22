@@ -5,73 +5,79 @@ import locations from '../src/scooterMarkers.json';
 
 
 
-export default function ScooterPage  ({navigation}) 
+export default class ScooterPage extends React.Component 
 {
-    state = {
-        markers: locations        
-    }
+    constructor() {
+        super()
+        this.state = {
+            markers: locations,
+            modalVisible: false        
+        }
+    } 
 
-    return (
-        <View style={styles.window}>
-            <View style={styles.header}>
-                <Pressable onPress = {() => navigation.dispatch(DrawerActions.openDrawer())}>
-                    <Image style={styles.navbarImage}source={require('../src/img/navbar-icon.png')}/>  
-                </Pressable> 
-                <Text style={styles.text}>Transport Sharing</Text>
-            </View>
-            <View style={styles.mapContainer}>
-                <MapView style={styles.map}
-                    showsUserLocation
-                    initialRegion={{
-                    latitude: 50.00446267391827, 
-                    longitude: 36.23569330615205,
-                    latitudeDelta: 0.015,
-                    longitudeDelta: 0.0121,
-                    }}
-                >
-                    {
-                        state.markers.map(marker =>(
-                            <Marker
-                            key={marker.key} 
-                            coordinate={{
-                                latitude: marker.latitude,
-                                longitude: marker.longitude,
-                            }}
-                            icon={require('../src/img/scooter_icon.png')}
-                            >
-                                <Callout tooltip>
-                                    <View>
-                                        <View style={styles.infoField}>
-                                            <Text style={styles.bikeName}>{marker.title}</Text>
-                                            <Text >{marker.descript}</Text>
+    render() {
+        return (
+            <View style={styles.window}>
+                <View style={styles.header}>
+                    <Pressable onPress = {() => this.props.navigation.toggleDrawer()}>
+                        <Image style={styles.navbarImage}source={require('../src/img/navbar-icon.png')}/>  
+                    </Pressable> 
+                    <Text style={styles.text}>Transport Sharing</Text>
+                </View>
+                <View style={styles.mapContainer}>
+                    <MapView style={styles.map}
+                        showsUserLocation
+                        initialRegion={{
+                        latitude: 50.00446267391827, 
+                        longitude: 36.23569330615205,
+                        latitudeDelta: 0.015,
+                        longitudeDelta: 0.0121,
+                        }}
+                    >
+                        {
+                            this.state.markers.map(marker =>(
+                                <Marker
+                                key={marker.key} 
+                                coordinate={{
+                                    latitude: marker.latitude,
+                                    longitude: marker.longitude,
+                                }}
+                                icon={require('../src/img/scooter_icon.png')}
+                                >
+                                    <Callout tooltip>
+                                        <View>
+                                            <View style={styles.infoField}>
+                                                <Text style={styles.bikeName}>{marker.title}</Text>
+                                                <Text >{marker.descript}</Text>
+                                            </View>
                                         </View>
-                                    </View>
-                                </Callout>
-                            </Marker>
+                                    </Callout>
+                                </Marker>
 
 
-                        ))
-                    }               
+                            ))
+                        }               
+                        
+                    </MapView>             
                     
-                </MapView>             
-                
+                </View>
+                <View style={styles.buttonContainer}>
+                        <TouchableOpacity style={styles.toBicyclePage} onPress={() => this.props.navigation.navigate('BicyclePage')}>
+                            <Image style={styles.buttonImage} source={require('../src/img/green-bike-navb.png')}/>
+                            <Text style={styles.buttonText}>Карта велосипедов</Text>                   
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.toScooterPage} >
+                            <Image style={styles.ScooterImage} source={require('../src/img/white-scooter-navb.png')}/>
+                            <Text style={styles.buttonScooterText}>Карта самокатов</Text>                   
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.toCarPage} onPress={() => this.props.navigation.navigate('CarPage')}>
+                            <Image style={styles.CarImage} source={require('../src/img/green-car-navb.png')}/>
+                            <Text style={styles.buttonCarText}>Карта автомобилей</Text>                   
+                        </TouchableOpacity>
+                </View>
             </View>
-            <View style={styles.buttonContainer}>
-                    <TouchableOpacity style={styles.toBicyclePage} onPress={() => navigation.navigate('BicyclePage')}>
-                        <Image style={styles.buttonImage} source={require('../src/img/green-bike-navb.png')}/>
-                        <Text style={styles.buttonText}>Карта велосипедов</Text>                   
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.toScooterPage} >
-                        <Image style={styles.ScooterImage} source={require('../src/img/white-scooter-navb.png')}/>
-                        <Text style={styles.buttonScooterText}>Карта самокатов</Text>                   
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.toCarPage} onPress={() => navigation.navigate('CarPage')}>
-                        <Image style={styles.CarImage} source={require('../src/img/green-car-navb.png')}/>
-                        <Text style={styles.buttonCarText}>Карта автомобилей</Text>                   
-                    </TouchableOpacity>
-            </View>
-        </View>
-    )
+        );
+    }
 
 }
 
@@ -82,11 +88,12 @@ const styles = StyleSheet.create
         paddingVertical: 10,
         backgroundColor: '#fff'
     },
-
+    
     navbarImage:
     {
         width: 45,
         height: 45,
+        marginLeft: 20,
     },
 
     header: 
@@ -106,24 +113,26 @@ const styles = StyleSheet.create
          fontSize: 20,
          fontWeight: 'bold',
          //fontFamily: 'Alegreya'
-         marginLeft: 65,
+         marginLeft: 35,
     },
 
     mapContainer: 
-    {
-        
-        height: '78%',        
-        padding: 20,        
+    {        
+        height: '78%',
+        width: '98%',
+        borderRadius: 25,
+        overflow: 'hidden',        
         marginTop: 10,
-        borderRadius: 10,
         flexDirection: 'column',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        alignSelf: 'center'
     },
 
     map: 
     {
         ...StyleSheet.absoluteFillObject,
+       
     },
 
     infoField: 
