@@ -38,11 +38,12 @@ export default class BicyclePage extends React.Component {
             markers: locations,
             modalVisible: false        
         }
+        
     } 
     /*this.setModalVisible = (visible) => {
         this.setState({ modalVisible: visible });
       }*/
-
+    
     render() {
         return (
             <View style={styles.window}>
@@ -140,7 +141,7 @@ const styles = StyleSheet.create
          fontSize: 20,
          fontWeight: 'bold',
          //fontFamily: 'Alegreya'
-         marginLeft: 35,
+         marginLeft: 40,
     },
 
     mapContainer: 

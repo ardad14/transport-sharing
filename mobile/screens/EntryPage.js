@@ -1,7 +1,6 @@
 import React from 'react';
 import {Text, View, StyleSheet, TextInput, Image, TouchableOpacity} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import * as Font from 'expo-font';
 import { color } from 'react-native-reanimated';
 
 export default class EntryPage extends React.Component 

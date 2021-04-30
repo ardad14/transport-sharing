@@ -24,10 +24,28 @@ const Drawer = createDrawerNavigator();
 function chooseVehicle() 
 {
     return(
-        <Tab.Navigator>
-            <Tab.Screen name="BicyclePage" component={BicyclePage} />
-            <Tab.Screen name="ScooterPage" component={ScooterPage} />
-            <Tab.Screen name="CarPage" component={CarPage} />
+        <Tab.Navigator >
+            <Tab.Screen 
+                name="BicyclePage"
+                options={
+                    {tabBarVisible: false}
+                }            
+                component={BicyclePage} 
+            />
+            <Tab.Screen 
+                name="ScooterPage" 
+                options={
+                    {tabBarVisible: false}
+                }     
+                component={ScooterPage}
+            />
+            <Tab.Screen 
+                name="CarPage" 
+                options={
+                    {tabBarVisible: false}
+                } 
+                component={CarPage} 
+            />
         </Tab.Navigator>
     );
 }

@@ -113,7 +113,7 @@ const styles = StyleSheet.create
          fontSize: 20,
          fontWeight: 'bold',
          //fontFamily: 'Alegreya'
-         marginLeft: 35,
+         marginLeft: 40,
     },
 
     mapContainer: 

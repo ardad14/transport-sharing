@@ -8,7 +8,6 @@ import {
      } from '@react-navigation/drawer';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-
 import { 
     Avatar,
     Title,
@@ -44,10 +43,11 @@ export default class SidebarContent extends React.Component
               <View style={styles.column}>
                   <View style={styles.moneyInfo}>
                       <View style={styles.row}>                
-                          {/*<Icon
+                          {<Icon
                               name='credit-card-check'
+                              size={30}
                               style={styles.creditCard}
-                          />*/}
+                          />}
                           <Paragraph style={styles.paragraph}>20 UAH</Paragraph>
                           <TouchableOpacity style={styles.addMoneyButton}>
                               <Text style={styles.addMoneyText}>Пополнить</Text>
@@ -184,8 +184,7 @@ const styles = StyleSheet.create({
     },
 
     moneyInfo: {
-        marginLeft: 25,
-        marginTop: 15,      
+        marginTop: 20,      
       
     },
 
@@ -213,7 +212,7 @@ const styles = StyleSheet.create({
     },
 
     creditCard: {
-        
+      marginRight: 15
     },
 
     pageContent: {

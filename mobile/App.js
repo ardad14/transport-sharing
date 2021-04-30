@@ -2,12 +2,10 @@ import React from 'react';
 import 'react-native-gesture-handler';
 import { View, Button, Text, Alert } from 'react-native';
 import { NavigationContainer, DrawerActions } from '@react-navigation/native';
-import {
-  createDrawerNavigator,
-  
-} from '@react-navigation/drawer';
+import * as Font from 'expo-font';
 //import workWithDB from "./data/workWithDB.js";
 import AppNavigator from './routes/AppNavigator.js';
+import AppLoading from 'expo';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import openDatabase from 'react-native-sqlite-storage';
 
@@ -15,22 +13,21 @@ import openDatabase from 'react-native-sqlite-storage';
     location: "/data/userInfo.db"
 });*/
 
+
 export default class App extends React.Component {
   
-  /*constructor() {
-    super()
-    this.getData();
-    if(userInfoDB != null) {
-        Alert("Database is opened!!");
-    }
-    
-    state = {
-      username: "",
-      password: "",
-      token: ""
-    }
-  }
+ 
+  state = {
+    fontLoaded: false,
+  };
 
+  async componentDidMount() {
+    await Font.loadAsync({
+      'Alegreya': require('./assets/fonts/Alegreya-VariableFont_wght.ttf')
+    });
+    this.setState({ fontLoaded: true });
+  }
+   /*
   ifExistDB () {
 
     userInfoBDdb.transaction(function (txn) {
@@ -49,11 +46,14 @@ export default class App extends React.Component {
         }
         );
     });
-  }*/
+  }*/ 
 
-    render() {
+    render() {      
       return (
+       
         <AppNavigator />
+                       
+               
       );
   }
 }
