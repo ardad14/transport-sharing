@@ -1,0 +1,19 @@
+[
+    {
+        "id": 1,
+        "model" : "Cannondale BAD BOY 2",
+        "size": "S",
+        "wheelSize": "27.5``",
+        "manufacturingYear": "2021",
+        "buyingYear": "2021"        
+    },
+
+    {
+        "id": 2,
+        "model" : "Pride ROCKSTEADY",
+        "size": "M",
+        "wheelSize": "28``",
+        "manufacturingYear": "2020",
+        "buyingYear": "2021" 
+    }
+]

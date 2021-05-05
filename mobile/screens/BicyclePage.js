@@ -1,58 +1,40 @@
 import React from 'react';
-import {View, Text, StyleSheet, TouchableOpacity, Image, Pressable, Modal} from 'react-native';
+import {View, Text, StyleSheet, TouchableOpacity, Image, Pressable, Modal, Alert} from 'react-native';
 import MapView, {PROVIDER_GOOGLE, Marker, Callout} from 'react-native-maps';
-import locations from '../src/bicycleMarkers.json';
-import { DrawerActions } from '@react-navigation/drawer';
+import stations from '../src/bicycleStations.json';
 
-
-
-{/*function modalMenu (...props)
-{
-    return (
-    <Modal>
-                <View style={styles.modalMenu}>
-                    {
-                    state.markers.map(marker => (
-                        <Text
-                        key={marker.key}
-                        style={styles.stationNumber}>{marker.title}</Text> 
-
-                    ))
-
-                    }
-                               
-                </View>
-            </Modal>
-    );
-}*/}
-
-
-
-
+import BicycleModal from '../modals/bicycleModal.js'
 
 export default class BicyclePage extends React.Component {
 
     constructor() {
-        super()
+        super()        
         this.state = {
-            markers: locations,
-            modalVisible: false        
-        }
-        
-    } 
-    /*this.setModalVisible = (visible) => {
-        this.setState({ modalVisible: visible });
-      }*/
+            markers: stations                          
+        }             
+    }
+    
+    
     
     render() {
+       let popupRef = React.createRef()
+
+       const onShowPopup = (prop) => {           
+           popupRef.show(prop)
+       }
+
+       const onClosePopup = () => {
+           popupRef.close()
+       }
+
         return (
             <View style={styles.window}>
                 <View style={styles.header}>
                     <Pressable onPress={() => this.props.navigation.toggleDrawer()}>
-                        <Image style={styles.navbarImage}source={require('../src/img/navbar-icon.png')}/>  
+                        <Image style={styles.navbarImage} source={require('../src/img/navbar-icon.png')}/>  
                     </Pressable> 
                     <Text style={styles.text}>Transport Sharing</Text>
-                </View>
+                </View>                
                 <View style={styles.mapContainer}>
                     <MapView style={styles.map}
                         showsUserLocation
@@ -65,12 +47,14 @@ export default class BicyclePage extends React.Component {
                     >
                         {
                             this.state.markers.map(marker =>(
+                                                            
                                 <Marker
                                 key={marker.key} 
                                 coordinate={{
                                     latitude: marker.latitude,
                                     longitude: marker.longitude,
                                 }}
+                                onPress={() => onShowPopup(marker.title)}
                                 icon={require('../src/img/bike_icon.png')}
                                 >
                                     <Callout tooltip>
@@ -103,7 +87,15 @@ export default class BicyclePage extends React.Component {
                             <Text style={styles.buttonCarText}>Карта автомобилей</Text>                   
                         </TouchableOpacity>
                 </View>
+                <View>
+                <BicycleModal
+                    addres="ул. Вишневского, 65" 
+                    ref={(target) => popupRef = target}
+                    onTouchOutside={onClosePopup}                
+                />
+                </View>
             </View>
+            
         );
     }   
 
@@ -264,21 +256,5 @@ const styles = StyleSheet.create
         width: 50,
         height: 45,
     },
-
-    modalMenu: 
-    {
-        height: '50%',
-        width: '100%',
-        borderTopLeftRadius: 10,
-        borderTopRightRadius: 10,
-        backgroundColor: "#C1DB81",
-
-    },
-
-    stationNumber:
-    {
-
-    },
-
-    
+       
 })
