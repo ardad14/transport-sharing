@@ -21,12 +21,14 @@ export default class BicycleModal extends React.Component {
         this.state = {
             show: false,
             data: bicycles,
-            stNumber: ''
+            stNumber: '',
+            stAddres: ''
         }
     }
 
-    show = (prop) => {
-        this.state.stNumber = prop
+    show = (number, addres) => {
+        this.state.stNumber = number
+        this.state.stAddres = addres
         this.setState({show: true})
     }
 
@@ -46,7 +48,7 @@ export default class BicycleModal extends React.Component {
     }
 
     renderTitle = () => {
-        const {addres} = this.props
+        const addres = this.state.stAddres
         const stationNumber = this.state.stNumber
         return (
             <View>

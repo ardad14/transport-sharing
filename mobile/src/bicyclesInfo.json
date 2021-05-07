@@ -5,15 +5,596 @@
         "size": "S",
         "wheelSize": "27.5``",
         "manufacturingYear": "2021",
-        "buyingYear": "2021"        
+        "buyingYear": "2021", 
+        "price":29500     
     },
 
     {
         "id": 2,
-        "model" : "Pride ROCKSTEADY",
+        "model" : "Pride ROCKSTEADY 8.3",
         "size": "M",
         "wheelSize": "28``",
         "manufacturingYear": "2020",
-        "buyingYear": "2021" 
+        "buyingYear": "2021",
+        "price":17300
+    },
+
+    {
+        "id": 3,
+        "model" : "Marin PRESIDIO 1",
+        "size": "M",
+        "wheelSize": "28``",
+        "manufacturingYear": "2021",
+        "buyingYear": "2021",
+        "price":18800
+    },
+
+    {
+        "id": 4,
+        "model" : "Marin TERRA LINDA 2",
+        "size": "M",
+        "wheelSize": "28``",
+        "manufacturingYear": "2021",
+        "buyingYear": "2021",
+        "price":18800
+    },
+
+    {
+        "id": 5,
+        "model" : "Marin PRESIDIO 1" ,
+        "size": "S",
+        "wheelSize": "28``",
+        "manufacturingYear": "2021",
+        "buyingYear": "2021",
+        "price":14100
+    },
+
+    {
+        "id": 6,
+        "model" : "Marin PRESIDIO 2",
+        "size": "L",
+        "wheelSize": "28``",
+        "manufacturingYear": "2021",
+        "buyingYear": "2021",
+        "price":22500
+    },
+
+    {
+        "id": 7,
+        "model" : "Cannondale BAD BOY 2",
+        "size": "L",
+        "wheelSize": "27.5``",
+        "manufacturingYear": "2021",
+        "buyingYear": "2021",
+        "price":10900
+    },
+
+    {
+        "id": 8,
+        "model" : "Marin MUIRWOODS",
+        "size": "M",
+        "wheelSize": "29``",
+        "manufacturingYear": "2021",
+        "buyingYear": "2021",
+        "price":21100
+    },
+
+    {
+        "id": 9,
+        "model" : "Marin KENTFIELD",
+        "size": "M",
+        "wheelSize": "28``",
+        "manufacturingYear": "2021",
+        "buyingYear": "2021",
+        "price":10900
+    },
+
+    {
+        "id": 10,
+        "model" : "Marin KENTFIELD 2",
+        "size": "XL",
+        "wheelSize": "28``",
+        "manufacturingYear": "2021",
+        "buyingYear": "2021",
+        "price":14900
+    },
+
+    {
+        "id": 11,
+        "model" : "",
+        "size": "M",
+        "wheelSize": "28``",
+        "manufacturingYear": "2020",
+        "buyingYear": "2021",
+        "price":10900
+    },
+
+    {
+        "id": 12,
+        "model" : "Schwinn SIVICA 7",
+        "size": "S",
+        "wheelSize": "28``",
+        "manufacturingYear": "2021",
+        "buyingYear": "2021",
+        "price":15600
+    },
+
+    {
+        "id": 13,
+        "model" : "Marin FAIRFAX 2",
+        "size": "M",
+        "wheelSize": "28``",
+        "manufacturingYear": "2021",
+        "buyingYear": "2021",
+        "price":18800
+    },
+    
+    {
+        "id": 14,
+        "model" : "Marin TERRA LINDA 2 ",
+        "size": "L",
+        "wheelSize": "28``",
+        "manufacturingYear": "2021",
+        "buyingYear": "2021",
+        "price":18800
+    },
+
+    {
+        "id": 15,
+        "model" : "Marin MUIRWOODS",
+        "size": "L",
+        "wheelSize": "29``",
+        "manufacturingYear": "2021",
+        "buyingYear": "2021",
+        "price":21100
+    },
+
+    {
+        "id": 16,
+        "model" : "Marin KENTFIELD 2",
+        "size": "M",
+        "wheelSize": "28``",
+        "manufacturingYear": "2021",
+        "buyingYear": "2021",
+        "price":14900
+    },
+
+    {
+        "id": 17,
+        "model" : "Cannondale BAD BOY 1",
+        "size": "XL",
+        "wheelSize": "27.5``",
+        "manufacturingYear": "2021",
+        "buyingYear": "2021",
+        "price": 20000
+    },
+
+    {
+        "id": 18,
+        "model" : "Cannondale BAD BOY 2 ",
+        "size": "M",
+        "wheelSize": "27.5``",
+        "manufacturingYear": "2021",
+        "buyingYear": "2021",
+        "price":21000
+    },
+
+    {
+        "id": 19,
+        "model" : "Marin PRESIDIO 3",
+        "size": "XL",
+        "wheelSize": "28``",
+        "manufacturingYear": "2021",
+        "buyingYear": "2021",
+        "price": 23100
+    },
+
+    {
+        "id": 20,
+        "model" : "Cannondale BAD BOY 3 ",
+        "size": "L","wheelSize": "27.5``",
+        "manufacturingYear": "2021",
+        "buyingYear": "2021",
+        "price":25600
+    },
+
+    {
+        "id": 21,
+        "model" : "Marin TERRA LINDA 2",
+        "size": "XS",
+        "wheelSize": "28``",
+        "manufacturingYear": "2021",
+        "buyingYear": "2021",
+        "price":18800
+    },
+
+    {
+        "id": 22,
+        "model" : "Marin TERRA LINDA 2",
+        "size": "S",
+        "wheelSize": "28``",
+        "manufacturingYear": "2021",
+        "buyingYear": "2021",
+        "price": 18800
+    },
+
+    {
+        "id": 23,
+        "model" : "Marin MUIRWOODS",
+        "size": "XXL",
+        "wheelSize": "29``",
+        "manufacturingYear": "2021",
+        "buyingYear": "2021",
+        "price":21100
+    },
+
+    {
+        "id": 24,
+        "model" : "Marin PRESIDIO 3",
+        "size": "S",
+        "wheelSize": "28``",
+        "manufacturingYear": "2021",
+        "buyingYear": "2021",
+        "price": 28300
+    },
+
+    {
+        "id": 25,
+        "model" : "Marin PRESIDIO 1 ",
+        "size": "XL",
+        "wheelSize": "28``",
+        "manufacturingYear": "2021",
+        "buyingYear": "2021",
+        "price":14100
+    },
+
+    {
+        "id": 26,
+        "model" : "Marin PRESIDIO 2",
+        "size": "S",
+        "wheelSize": "28``",
+        "manufacturingYear": "2021",
+        "buyingYear": "2021",
+        "price": 22500
+    },
+
+    {
+        "id": 27,
+        "model" : "Marin PRESIDIO 2 ",
+        "size": "M",
+        "wheelSize": "28``",
+        "manufacturingYear": "2021",
+        "buyingYear": "2021",
+        "price": 22500
+    },
+
+    {
+        "id": 28,
+        "model" : "Marin PRESIDIO 2",
+        "size": "L",
+        "wheelSize": "28``",
+        "manufacturingYear": "2021",
+        "buyingYear": "2021",
+        "price": 22500
+    },
+
+    {
+        "id": 29,
+        "model" : "Marin MUIRWOODS",
+        "size": "XL",
+        "wheelSize": "29``",
+        "manufacturingYear": "2021",
+        "buyingYear": "2021",
+        "price": 21100
+    },
+
+    {
+        "id": 30,
+        "model" : "Marin PRESIDIO 1",
+        "size": "L",
+        "wheelSize": "28``",
+        "manufacturingYear": "2021",
+        "buyingYear": "2021",
+        "price": 14180
+    },
+
+    {
+        "id": 31,
+        "model" : "Marin KENTFIELD 2",
+        "size": "M",
+        "wheelSize": "28``",
+        "manufacturingYear": "2021",
+        "buyingYear": "2021",
+        "price": 14900
+    },
+
+    {
+        "id": 32,
+        "model" : "Marin KENTFIELD 2",
+        "size": "XL",
+        "wheelSize": "28``",
+        "manufacturingYear": "2021",
+        "buyingYear": "2021",
+        "price": 25600
+    },
+
+    {
+        "id": 33,
+        "model" : "Cannondale BAD BOY 1",
+        "size": "L",
+        "wheelSize": "27.5``",
+        "manufacturingYear": "2021",
+        "buyingYear": "2021",
+        "price": 24000
+    },
+
+    {
+        "id": 34,
+        "model" : "Cannondale BAD BOY 2",
+        "size": "XL",
+        "wheelSize": "27.5``",
+        "manufacturingYear": "2021",
+        "buyingYear": "2021",
+        "price": 25700
+    },
+
+    {
+        "id": 35,
+        "model" : "Cannondale BAD BOY 3",
+        "size": "S",
+        "wheelSize": "27.5``",
+        "manufacturingYear": "2021",
+        "buyingYear": "2021",
+        "price": 26600
+    },
+
+    {
+        "id": 36,
+        "model" : "Marin PRESIDIO 3",
+        "size": "L",
+        "wheelSize": "28``",
+        "manufacturingYear": "2021",
+        "buyingYear": "2021",
+        "price": 28300 
+    },
+
+    {
+        "id": 37,
+        "model" : "Cannondale BAD BOY 3",
+        "size": "XL",
+        "wheelSize": "27.5``",
+        "manufacturingYear": "2021",
+        "buyingYear": "2021",
+        "price": 26600
+    },
+
+    {
+        "id": 38,
+        "model" : "Marin PRESIDIO 3 ",
+        "size": "M",
+        "wheelSize": "28``",
+        "manufacturingYear": "2021",
+        "buyingYear": "2021",
+        "price": 28300
+    },
+
+    {
+        "id": 39,
+        "model" : "Marin FAIRFAX 2 ",
+        "size": "S",
+        "wheelSize": "28``",
+        "manufacturingYear": "2020","buyingYear": "2021",
+        "price": 15900
+    },
+
+    {
+        "id": 40,
+        "model" : "Marin FAIRFAX 2 ",
+        "size": "M",
+        "wheelSize": "28``",
+        "manufacturingYear": "2020",
+        "buyingYear": "2021",
+        "price": 18700
+    },
+
+    {
+        "id": 41,
+        "model" : "Apollo TRACE 10",
+        "size": "L",
+        "wheelSize": "28``",
+        "manufacturingYear": "2020",
+        "buyingYear": "2021",
+        "price": 14100
+    },
+
+    {
+        "id": 42,
+        "model" : "Apollo TRACE 10",
+        "size": "XL",
+        "wheelSize": "28``",
+        "manufacturingYear": "2020",
+        "buyingYear": "2021",
+        "price": 18900
+    },
+
+    {
+        "id": 43,
+        "model" : "Marin FAIRFAX 2 ",
+        "size": "XL",
+        "wheelSize": "28``",
+        "manufacturingYear": "2020",
+        "buyingYear": "2021",
+        "price": 15900
+    },
+
+    {
+        "id": 44,
+        "model" : "Cannondale QUICK 6",
+        "size": "S",
+        "wheelSize": "28``",
+        "manufacturingYear": "2020",
+        "buyingYear": "2021",
+        "price": 21900
+    },
+
+    {
+        "id": 45,
+        "model" : "Cannondale QUICK 6",
+        "size": "S",
+        "wheelSize": "28``",
+        "manufacturingYear": "2020",
+        "buyingYear": "2021",
+        "price": 16000
+    },
+
+    {
+        "id": 46,
+        "model" : "Marin PRESIDIO 1",
+        "size": "S",
+        "wheelSize": "28``",
+        "manufacturingYear": "2020",
+        "buyingYear": "2021",
+        "price": 21800
+    },
+
+    {
+        "id": 47,
+        "model" : "Schwinn Streamliner 1",
+        "size": "S",
+        "wheelSize": "26``",
+        "manufacturingYear": "2015",
+        "buyingYear": "2021",
+        "price": 18100
+    },
+
+    {
+        "id": 48,
+        "model" : "Marin PRESIDIO 1 ",
+        "size": "XL",
+        "wheelSize": "28``",
+        "manufacturingYear": "2020",
+        "buyingYear": "2021",
+        "price": 16800
+    },
+
+    {
+        "id": 49,
+        "model" : "Marin MUIRWOODS",
+        "size": "S",
+        "wheelSize": "29``",
+        "manufacturingYear": "2021",
+        "buyingYear": "2021",
+        "price": 21300
+    },
+
+    {
+        "id": 50,
+        "model" : "Cannondale BAD BOY 9",
+        "size": "L",
+        "wheelSize": "28``",
+        "manufacturingYear": "2014",
+        "buyingYear": "2021",
+        "price": 14300
+    },
+
+    {
+        "id": 51,
+        "model" : "Schwinn Frontier",
+        "size": "M",
+        "wheelSize": "26``",
+        "manufacturingYear": "2014",
+        "buyingYear": "2021",
+        "price": 14600
+    },
+
+    {
+        "id": 52,
+        "model" : "Cannondale BAD BOY 3",
+        "size": "XL",
+        "wheelSize": "28``",
+        "manufacturingYear": "2016",
+        "buyingYear": "2021",
+        "price": 21800
+    },
+
+    {
+        "id": 53,
+        "model" : "Cannondale BAD BOY 3",
+        "size": "L",
+        "wheelSize": "28``",
+        "manufacturingYear": "2016",
+        "buyingYear": "2021",
+        "price": 19800
+    },
+
+    {
+        "id": 54,
+        "model" : "Cannondale QUICK 6",
+        "size": "L",
+        "wheelSize": "28``",
+        "manufacturingYear": "2014",
+        "buyingYear": "2021",
+        "price": 14600
+    },
+
+    {
+        "id": 55,
+        "model" : "Marin MUIRWOODS RC",
+        "size": "L",
+        "wheelSize": "27.5``",
+        "manufacturingYear": "2020",
+        "buyingYear": "2021",
+        "price": 24800
+    },
+
+    {
+        "id": 56,
+        "model" : "Cannondale BAD BOY 2",
+        "size": "M",
+        "wheelSize": "28``",
+        "manufacturingYear": "2016",
+        "buyingYear": "2021",
+        "price": 18700
+    },
+
+    {
+        "id": 57,
+        "model" : "CCannondale QUICK CX 4 ",
+        "size": "XL",
+        "wheelSize": "28``",
+        "manufacturingYear": "2014",
+        "buyingYear": "2021",
+        "price": 17000
+    },
+
+    {
+        "id": 58,
+        "model" : "Cannondale Quick Neo 2",
+        "size": "M",
+        "wheelSize": "29``",
+        "manufacturingYear": "2020",
+        "buyingYear": "2021",
+        "price": 24500
+    },
+    
+    {
+        "id": 59,
+        "model" : "Cannondale BAD BOY 2",
+        "size": "XL",
+        "wheelSize": "28``",
+        "manufacturingYear": "2016",
+        "buyingYear": "2021",
+        "price": 23500
+    },
+
+    {
+        "id": 60,
+        "model" : "Cannondale ALTHEA 3",
+        "size": "S",
+        "wheelSize": "28``",
+        "manufacturingYear": "2014",
+        "buyingYear": "2021",
+        "price": 23500
     }
+
 ]
