@@ -26,49 +26,52 @@
 		width: 100%;
 		top:0;
 		left: 0;
-	.header__items{
-	  display: flex;
-	  align-items: center;
-	  justify-content: space-between;
-	}
-	.text{
-	  font-family: 'Alegreya', serif;
-	  font-size: 31px;
-	  color: #FFFFFF;
-	  font-weight: 700;
-	  letter-spacing: 4px;
-	}
-	.header__nav{
-	    
-	    font-size: 23px;
-	}
-	.nav__link_enter{
-		background-color: #169BD5;
-		border: none;
-		padding: 8px 50px;
-		text-align: center;
-		text-decoration: none;
-		display: inline-block;
-		font-size: 21px;
-		border-radius: 5px;
-		color: #FFFFFF;
-	    vertical-align: top;
-	    margin: 0 30px;
-	}
-	.nav__link_reg{
-		background-color: #fff;
-		border: none;
-		padding: 8px 20px;
-		text-align: center;
-		text-decoration: none;
-		display: inline-block;
-		font-size: 21px;
-		border-radius: 5px;
-		color: #C1DB81;
-	    vertical-align: top;
-	}
+		.header__items{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		.text{
+			font-family: 'Alegreya', serif;
+			font-size: 31px;
+			color: #FFFFFF;
+			font-weight: 700;
+			letter-spacing: 4px;
+		}
+		.header__nav{
+			
+			font-size: 23px;
+		}
+		.nav__link_enter{
+			background-color: #169BD5;
+			border: none;
+			padding: 8px 50px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 21px;
+			border-radius: 5px;
+			color: #FFFFFF;
+			vertical-align: top;
+			margin: 0 30px;
+		}
+		.nav__link_reg{
+			background-color: #fff;
+			border: none;
+			padding: 8px 20px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 21px;
+			border-radius: 5px;
+			color: #C1DB81;
+			vertical-align: top;
+		}
 }
-// main
+// END HEADER
+
+
+// main transport__sharing.html
 main{
 		background-color: #C1DB81;
 	.container{
@@ -80,7 +83,6 @@ main{
 	}
 	#box{
 		margin-top: 60px;
-		
 		display: flex;
 		position: relative;
 		left: 200px;
@@ -94,103 +96,115 @@ main{
 		-khtml-border-radius:30px; /* закругл. для браузера Konquerer системы Linux */
 		border-radius: 30px; /* закругление углов для всех, кто понимает */
 		padding: 5px; /* внутренние отступы */
+
+
+		// proposition
+		.proposition__items{
+			h1{
+				margin-top: 30px;
+				color: black;
+				margin-bottom: 30px;
+				font-family: "NAMU-Pro";
+				color: #fff;
+				font-size: 33px;
+				font-weight: inherit;
+				margin-left: 30px;
+			}
+			.list{
+				position: relative;
+				color: #000;
+				list-style-type: none;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 18px;
+				line-height: 140%;
+			}
+			.list .list__items{
+				margin-right: 310px;
+			}
+			.list li{
+				left: 70px;
+				margin: 0 0 40px 50px;
+				position: relative;
+				padding: 0 0 0 30px;
+				font-family: 'Montserrat', sans-serif;
+				font-size: 21px;
+				font-style: italic;
+				color: #fff;
+			}
+			.list li:before{
+				content: '';
+				margin-top: -5px;
+				margin-right: 30px;
+				background: url("fonts/2.png")0 0 no-repeat;
+				width: 80px;
+				height:100px;
+				position: absolute;
+				top: 0;
+				left: -50px;
+			}
+			.list li:nth-child(2):before{
+				margin-top: 3px;
+				}
+			.save a img{
+				margin-top: 20px;
+				max-width: 23%;
+				margin-left: 60px;
+			}
+			.phone{
+				top: 15px;
+				max-width: 110%;
+				position: relative;
+				right: 100px;
+			}
+			// end proposition
+		}
 	}
-	h1{
-		margin-top: 30px;
-		color: black;
-		margin-bottom: 30px;
-		font-family: "NAMU-Pro";
-		color: #fff;
-		font-size: 33px;
-		font-weight: inherit;
-		margin-left: 30px;
-	}
-	.list{
-	    position: relative;
-	    color: #000;
-	    list-style-type: none;
-	    font-style: normal;
-	    font-weight: normal;
-	    font-size: 18px;
-	    line-height: 140%;
+	
+	// cities
+	.our_company{
+		.container_company{
+			max-width: 1180px;
+			   margin: 0px auto;
+			padding: 20px 8px;
+		}
+		 h2{
+			margin-top: 100px;
+			color: #191919;
+			font-family: "NAMU-Pro";
+			font-size: 33px;
+			margin-bottom: 25px;
+			font-weight: 700;
+		}
+		 h3{
+			color:#191919;
+			font-family: "NAMU-Pro";
+			font-size: 25px;
+			margin-bottom: 70px;
+			font-weight: 700;
+		}
+		.cities{
+			display: flex;
+			margin-bottom: 60px;
+			position: relative;
+			left: 60px;
+		}
+		.list_cities{
+			position: relative;
+			margin-left: 190px;
+			font-weight: bold;
+			font-family: "NAMU-Pro";
+		}
+		.list_cities:first-child{
+			margin-left: 0;
+		}
+		.list_cities p{
+			color: #191919;
+			font-size: 22px;
+			margin-bottom: 20px;
+		}
 	}
 
-	.list li{
-		left: 70px;
-	    margin: 0 0 40px 90px;
-	    position: relative;
-	    padding: 0 0 0 30px;
-	    font-family: 'Montserrat', sans-serif;
-	    font-size: 21px;
-	    font-style: italic;
-	    color: #fff;
-	}
-	.list li:before{
-	    content: '';
-	    margin-top: -5px;
-	    margin-right: 30px;
-	    background: url("fonts/2.png")0 0 no-repeat;
-	    width: 80px;
-	    height:100px;
-	    position: absolute;
-	    top: 0;
-	    left: -50px;
-	}
-	.list li:nth-child(2):before{
-		margin-top: 3px;
-		}
-	.save a img{
-		margin-top: 20px;
-		max-width: 23%;
-		margin-left: 60px;
-	}
-	.phone{
-		top: 15px;
-		max-width: 110%;
-		position: relative;
-		right: 100px;
-	}
-	// cities
-	.container_company{
-		max-width: 1180px;
-   		margin: 0px auto;
-    	padding: 20px 8px;
-	}
-	.our_company h2{
-		margin-top: 100px;
-		color: #191919;
-		font-family: "NAMU-Pro";
-		font-size: 33px;
-		margin-bottom: 25px;
-		font-weight: 700;
-	}
-	.our_company h3{
-		color:#191919;
-		font-family: "NAMU-Pro";
-		font-size: 25px;
-		margin-bottom: 70px;
-		font-weight: 700;
-	}
-	.cities{
-		display: flex;
-		margin-bottom: 60px;
-		position: relative;
-		left: 60px;
-	}
-	.list_cities{
-		position: relative;
-		margin-left: 190px;
-		font-weight: bold;
-		font-family: "NAMU-Pro";
-	}
-	.list_cities:first-child{
-		margin-left: 0;
-	}
-	.list_cities p{
-		color: #191919;
-		font-size: 22px;
-		margin-bottom: 20px;
-	}
 	// map
 	.map h2{
 		text-align: center;
@@ -263,7 +277,7 @@ main{
 		vertical-align: middle;
 		display: inline-block;
 		margin-left: 20px;
-		left:15px;
+		left:-10px;
 		margin-bottom: 50px;
 	}
 	.setting_maps_item{
@@ -274,6 +288,7 @@ main{
 	}
 	.setting_maps_item p{
 		margin-bottom: 30px;
+		margin-right: 70px;
 	}
 	.show_item{
 		margin-top: 20px;
@@ -281,9 +296,8 @@ main{
 	.setting_maps_item input{
 		margin-top: 20px;
 		position: relative;
-		margin-left: -45px;
+		margin-left: -50px;
 	}
-	
 	.map img {
 		max-width:100%;
 		position: relative;
@@ -300,10 +314,6 @@ main{
 	}
 
 	/* Check */
-
-	.check {
-		padding-left: 40px;
-	}
 
 	.check__input {
 		position: absolute;
@@ -325,6 +335,10 @@ main{
 		background-position: 50% 50%;
 		box-shadow: 0 0 0 0.1em #4A90E2;
 	}
+	.check__box:nth-child(2){
+		left: 50px;
+	}
+	
 
 	/* Checked */
 
@@ -341,6 +355,9 @@ main{
 	}
 
 }
+
+
+// FOOOTER
 footer{
 	background-color: #C1DB81;
 	padding: 30px 40px 10px 40px;
@@ -379,6 +396,9 @@ footer{
 		white-space: nowrap;
 	}
 }
+// END FOOTER
+
+
 // ENTER PAGES
 main{
 	text-align: center;
@@ -527,8 +547,7 @@ main{
 			margin-bottom: 40px;
 			border-radius: 20px;
 			padding-left: 35px;
-			margin-left: 202px;
-			margin-top: -45px;
+			
 		}
 		.country__ch { 
 				margin-top: -12px;
@@ -578,6 +597,155 @@ main{
 				margin-right: 27px;
 				margin-left: 27px;
 			}
+		}
+	}
+}
+
+// profile page
+// header
+header{
+	.text{
+		font-family: 'Alegreya', serif;
+		font-size: 31px;
+		color: #FFFFFF;
+		font-weight: 700;
+		letter-spacing: 4px;
+	}
+	.change_info{
+		font-family: 'Alegreya', serif;
+		background-color: #C1DB81;
+		border: none;
+		font-weight: 500;
+		padding: 8px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 25px;
+		border-radius: 5px;
+		color: #FFFFFF;
+		vertical-align: top;
+		position: relative;
+		
+	}
+	.exit_profile{
+		font-family: 'Alegreya', serif;
+		background-color: #169BD5;
+		border: none;
+		font-weight: 500;
+		padding: 8px 40px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 21px;
+		border-radius: 5px;
+		color: #fff;
+		vertical-align: top;
+	}
+}
+main{
+	#box__profile{
+		margin-top: 60px;
+		display: flex;
+		position: relative;
+		left: 150px;
+		width:1000px; /* Длина фигуры */
+		height:450px; /* Высота фигуры */
+		 
+		background:#e6e5e5; /* фон блока */
+		border: 3px #e6e5e5 solid; /* стили рамки */
+		-moz-border-radius: 30px; /* закругление для старых Mozilla Firefox */
+		-webkit-border-radius: 30px; /* закругл. для старых Chrome и Safari */
+		-khtml-border-radius:30px; /* закругл. для браузера Konquerer системы Linux */
+		border-radius: 30px; /* закругление углов для всех, кто понимает */
+		padding: 5px; /* внутренние отступы */
+		.profile__info{
+			display: flex;
+			justify-content: space-between;
+			.info__items{
+				.title p{
+					margin-right: 40px;
+					margin-top: 50px;
+					margin-bottom: 40px;
+					color: #414141;
+					font-family: "NAMU-Pro"; 
+					font-size: 32px;
+				}
+				.person p{
+					text-align: start;
+					margin-left: 60px;
+					margin-bottom: 40px;
+					color: #2e2d2d;
+					font-family: "NAMU-Pro"; 
+					font-size: 25px;
+				}
+				.star{
+					text-align: start;
+					margin-top: 90px;
+					margin-left: 20px;
+					p{
+						color: #2e2d2d;
+						margin-bottom: 85px;
+						font-size: 22px;
+					}
+				}
+				.definetly{
+					flex-direction: column;
+					margin-left: 140px;
+					margin-top: 80px;
+					a{ 
+						margin-bottom: 40px;
+						font-family: 'Montserrat', sans-serif;
+						background-color: #C1DB81;
+						padding: 8px 20px;
+						text-align: center;
+						text-decoration: none;
+						display: block;
+						font-size: 22px;
+						font-weight: 500;
+						border-radius: 2px;
+						color: #fff;
+						box-shadow: 0 0 0 5px #CAF982;
+						border: 1px solid #C1DB81;
+						
+					}
+				}
+				
+			}
+		}
+	}
+	.definetly__info{
+		width: 1100px;
+		margin-bottom: 60px;
+		margin-left: 160px;
+		margin-top: 50px;
+		p{
+			color:#2e2d2d;
+			line-height: 25px;
+			margin-bottom: 20px;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 500;
+			font-size: 18px;
+			text-align: start;
+			a{
+				color:#4A90E2 ;
+				text-decoration: underline;
+			}
+		}
+	}
+	.notes{
+		margin-left: 200px;
+		margin-top: 40px;
+		width: 950px;
+		color:#2e2d2d;
+		line-height: 25px;
+		margin-bottom: 20px;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 500;
+		font-size: 18px;
+		text-align: start;
+		a{
+			color:#4A90E2 ;
+			text-decoration: underline;
 		}
 	}
 }
