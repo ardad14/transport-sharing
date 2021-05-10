@@ -217,13 +217,15 @@ main #box .proposition__items .list li:nth-child(2):before {
 main #box .proposition__items .save a img {
   margin-top: 20px;
   max-width: 23%;
+  right: 50px;
+  position: relative;
   margin-left: 60px;
 }
 main #box .proposition__items .phone {
   top: 15px;
   max-width: 110%;
   position: relative;
-  right: 100px;
+  right: 90px;
 }
 main .our_company .container_company {
   max-width: 1180px;
@@ -594,7 +596,7 @@ main .enter .country__ch {
   width: 500px;
   height: 45px;
   position: relative;
-  left: 390px;
+  left: 372px;
   box-sizing: border-box;
   padding-left: 35px;
   color: #797979;
@@ -777,4 +779,59 @@ main .notes {
 main .notes a {
   color: #4A90E2;
   text-decoration: underline;
+}
+
+.discounts__info p {
+  text-align: start;
+  margin-left: 70px;
+  color: #4e4e4e;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 26px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+}
+.discounts__info h2 {
+  color: #4e4e4e;
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+.discounts__info .discounts__propos {
+  color: #4e4e4e;
+  text-align: left;
+  margin-left: 70px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+.discounts__info .discounts__propos ol {
+  /* убираем стандартную нумерацию */
+  list-style: none;
+  /* Идентифицируем счетчик и даем ему имя li. Значение счетчика не указано - по умолчанию оно равно 0 */
+  counter-reset: li;
+}
+.discounts__info .discounts__propos li:before {
+  /* Определяем элемент, который будет нумероваться — li. Псевдоэлемент before указывает, что содержимое, вставляемое при помощи свойства content, будет располагаться перед пунктами списка. Здесь же устанавливается значение приращения счетчика (по умолчанию равно 1). */
+  counter-increment: li;
+  /* С помощью свойства content выводится номер пункта списка. counters() означает, что генерируемый текст представляет собой значения всех счетчиков с таким именем. Точка в кавычках добавляет разделяющую точку между цифрами, а точка с пробелом добавляется перед содержимым каждого пункта списка */
+  content: counters(li, ".") ". ";
+}
+.discounts__info .discounts__propos .if__discounts {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+.discounts__info .discounts__propos .if__discounts .else__discounts {
+  margin-left: 50px;
+  margin-top: 30px;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+.discounts__info .discounts__propos .if__discounts .else__discounts p {
+  margin-left: 50px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 23px;
+  font-weight: 500;
 }

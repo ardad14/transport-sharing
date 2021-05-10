@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<link rel="stylesheet" href="сss/styles.css">
+  <script src="https://kit.fontawesome.com/7c16640ea8.js" crossorigin="anonymous"></script>
+	<title>Transport_sharing</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500&family=Montserrat:ital,wght@0,400;0,500;1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+		<div class="container">
+			<div class="header__items">
+				<div class="logo">
+					<!-- <img src="" alt=""> -->
+					<div class="text">Transport Sharing</div>
+				</div>
+				<nav class="header__nav">
+              <a class="nav__link_enter" href="enter.html">Вход</a>
+              <a class="nav__link_reg" href="registration.html">Регистрация</a>
+		    </nav>
+			</div>
+		</div>
+	</header>
+    <main>    
+        <div class="container">
+          <div class="enter">
+            <h2>Редактировать</h2>
+            <form>
+                <div class="form__input">
+                    <div class="name">
+                        <input type="text" name="username" required placeholder="Имя">
+                    </div>
+
+                    <div class="surname">
+                        <input type="text" name="usersurname" required placeholder="Фамилия">
+                    </div>
+
+                    <div class="email">
+                        <input type="email" name="email" required placeholder="Электронный адрес">
+                    </div>
+                    
+                    <div class="phone">
+                        <input type="phone" name="phone" required placeholder="Номер телефона">
+                    </div>
+
+
+                    <div class="birthday">
+                        <h3>Дата Рождения:</h3>
+                        <select name="DaBday">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                          <option value="11">11</option>
+                        </select>
+                        <select name="DaBmonth">
+                          <option value="january">Январь</option>
+                          <option value="february">Февраль</option>
+                          <option value="march">Март</option>
+                          <option value="april">Апрель</option>
+                          <option value="may">Май</option>
+                          <option value="june">Июнь</option>
+                          <option value="july">Июль</option>
+                          <option value="august">Август</option>
+                          <option value="september">Сентябрь</option>
+                          <option value="october">Октябрь</option>
+                          <option value="novemer">Ноябрь</option>
+                          <option value="december">Декабрь</option>
+                        </select>
+                        <select name="DaByear">
+                          <option value="1995">1995</option>
+                          <option value="1996">1996</option>
+                          <option value="1997">1997</option>
+                          <option value="1998">1998</option>
+                          <option value="1999">1999</option>
+                          <option value="2000">2000</option>
+                          <option value="2001">2001</option>
+                          <option value="2002">2002</option>
+
+
+                        </select>
+                    </div>
+
+                    <div class="password__reg">
+                        <input type="password" placeholder="Изменить пароль" name="psw" required>
+                    </div>
+                    <div class="password__repeat">
+                        <input type="password" placeholder="Повторите пароль" name="psw-repeat" required>
+                    </div>
+                    <div class="country">
+                        <label for="choose_city">Страна</label>
+                        <select class="country__ch"> 
+                            <option>Выберите страну проживания</option>
+                            <option>Харьков</option> 
+                            <option>Киев</option> 
+                            <option>Днепр</option> 
+                            <option>Херсон</option> 
+                            <option>Луцк</option> 
+                            <option>Черновцы</option> 
+                            <option>Николаев</option> 
+                          </select>
+                    </div>
+                    <div class="btn ">
+                        <input class="btn__sumbit" type="sumbit" name="sumbit" value="Изменить" onClick='location.href="profile.html"' >
+                    </div>
+                </div>
+            </form>
+          </div>
+        </div>
+      </main>
+</body>
+<footer class="footer">
+    <div class="footer__info">
+        <div class="footer_links">
+          <div class="social">
+            <div class="social_text">
+              <h4>Ми в соцcетях:</h4>
+            </div>
+            <div class="social_links">
+              <a href="#"><img src="img/gratis_png_logo_de_tweeter_icono_de_graficos_escalables_twitter.png" alt=""></a>
+              <a href="#"><img src="img/md_5a9797d18f418.png" alt=""></a>
+              <a href="#"><img src="img/w513h5131371296104Facebook.png" alt=""></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer_text">
+          (с) 2020 Transport Sharing  <br>
+          Inc
+        </div>
+    </div>
+</footer>
+</html>

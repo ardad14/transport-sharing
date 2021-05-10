@@ -149,13 +149,15 @@ main{
 			.save a img{
 				margin-top: 20px;
 				max-width: 23%;
+				right: 50px;
+				position: relative;
 				margin-left: 60px;
 			}
 			.phone{
 				top: 15px;
 				max-width: 110%;
 				position: relative;
-				right: 100px;
+				right: 90px;
 			}
 			// end proposition
 		}
@@ -558,7 +560,7 @@ main{
 				width: 500px;
 				height: 45px;
 				position: relative;
-				left: 390px;
+				left: 372px;
 				box-sizing: border-box; 
 				padding-left: 35px;
 				color: #797979;
@@ -747,5 +749,62 @@ main{
 			color:#4A90E2 ;
 			text-decoration: underline;
 		}
+	}
+}
+// discounts
+.discounts__info{
+	p{
+		text-align: start;
+		margin-left: 70px;
+		color:rgb(78, 78, 78);
+		margin-top: 50px;
+		margin-bottom: 50px;
+		font-size: 26px;
+		font-weight: 600;
+		font-family: 'Montserrat', sans-serif;
+	}
+	h2{
+		color:rgb(78, 78, 78);
+		font-family: 'Montserrat', sans-serif;
+		font-size: 30px;
+		font-weight: 700;
+		margin-bottom: 50px;
+	}
+	.discounts__propos{
+		color:rgb(78, 78, 78);
+		text-align: left;
+		margin-left: 70px;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 500;
+		ol {
+			/* убираем стандартную нумерацию */
+			list-style: none;
+			/* Идентифицируем счетчик и даем ему имя li. Значение счетчика не указано - по умолчанию оно равно 0 */
+			counter-reset: li;
+		 }
+		 li:before {
+			/* Определяем элемент, который будет нумероваться — li. Псевдоэлемент before указывает, что содержимое, вставляемое при помощи свойства content, будет располагаться перед пунктами списка. Здесь же устанавливается значение приращения счетчика (по умолчанию равно 1). */
+			counter-increment: li;
+			/* С помощью свойства content выводится номер пункта списка. counters() означает, что генерируемый текст представляет собой значения всех счетчиков с таким именем. Точка в кавычках добавляет разделяющую точку между цифрами, а точка с пробелом добавляется перед содержимым каждого пункта списка */
+			content: counters(li, ".") ". ";
+		 }
+		 .if__discounts{
+			 margin-top: 30px;
+			 margin-bottom: 20px;
+			font-size: 30px;
+			.else__discounts{
+				margin-left: 50px;
+				margin-top: 30px;
+				font-size: 26px;
+				margin-bottom: 20px;
+				p{
+					margin-left: 50px;
+					margin-top: 30px;
+					margin-bottom: 20px;
+					font-size: 23px;
+					font-weight: 500;
+				}
+			}
+		 }
 	}
 }
