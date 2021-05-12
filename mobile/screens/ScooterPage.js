@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, StyleSheet, TouchableOpacity, Image, Pressable} from 'react-native';
 import MapView, {PROVIDER_GOOGLE, Marker, Callout} from 'react-native-maps';
-import locations from '../src/scooterMarkers.json';
+import locations from '../src/scooterStations.json';
 
 
 
