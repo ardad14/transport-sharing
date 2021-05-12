@@ -10,17 +10,19 @@ export default class BicyclePage extends React.Component {
     constructor() {
         super()        
         this.state = {
-            markers: stations                          
+            markers: stations
+                                
         }             
     }
     
     
     
     render() {
+       
        let popupRef = React.createRef()
 
-       const onShowPopup = (prop) => {           
-           popupRef.show(prop)
+       const onShowPopup = (title, addres) => {           
+           popupRef.show(title, addres)
        }
 
        const onClosePopup = () => {
@@ -54,7 +56,7 @@ export default class BicyclePage extends React.Component {
                                     latitude: marker.latitude,
                                     longitude: marker.longitude,
                                 }}
-                                onPress={() => onShowPopup(marker.title)}
+                                onPress={() => onShowPopup(marker.title, marker.address)}                                
                                 icon={require('../src/img/bike_icon.png')}
                                 >
                                     <Callout tooltip>
@@ -88,8 +90,7 @@ export default class BicyclePage extends React.Component {
                         </TouchableOpacity>
                 </View>
                 <View>
-                <BicycleModal
-                    addres="ул. Вишневского, 65" 
+                <BicycleModal                    
                     ref={(target) => popupRef = target}
                     onTouchOutside={onClosePopup}                
                 />
