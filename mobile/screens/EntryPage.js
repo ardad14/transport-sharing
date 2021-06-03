@@ -1,20 +1,40 @@
 import React from 'react';
 import {Text, View, StyleSheet, TextInput, Image, TouchableOpacity} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import {createStore} from 'redux';
+import {Provider} from 'react-redux'
 import { color } from 'react-native-reanimated';
+import users from "../data/users.json"
+
+const initialState= {
+    login: '',
+    password: ''
+}
+const reducer = (state=initialState) => {
+    return state
+}
+
+const store = createStore(reducer)
 
 export default class EntryPage extends React.Component 
 {
-    state ={
-        username: "",
-        password: "",
-        token: "",
-    }
-
     constructor() {
         super()
+        this.state = {
+            login: "",
+            password: "",
+            userData: []
+        }
         this.getData();
 
+    }
+
+    setLogin(value) {
+        this.setState({login: value})
+    }
+
+    setPassword(value) {
+        this.setState({password: value})
     }
 
     onSubmit = async () => {
@@ -37,6 +57,12 @@ export default class EntryPage extends React.Component
         }
       }
 
+    enter() {
+        this.state.userData = users.filter(element => element.email == this.state.login);
+        if(this.state.userData.ф)
+        this.props.navigation.navigate('chooseVehicle')
+    }
+
 
     render() {
         return (
@@ -46,24 +72,37 @@ export default class EntryPage extends React.Component
                 </View>
                 <View style={styles.mainContainer}>
                     {/*<Text style={styles.title}>{this.state.token}</Text>*/}  
-                    <Text style={styles.title}>Вход</Text>
-                    <TextInput style={styles.input} placeholder = 'Email/телефон'/>
-                    <TextInput style={styles.input} placeholder = 'Пароль'/>                     
-                    <TouchableOpacity style={styles.entryButton} onPress={() => this.props.navigation.navigate('chooseVehicle')}>
-                        <Text style={styles.entryButonText}>Войти</Text>                   
-                    </TouchableOpacity>            
-                    <TouchableOpacity style={styles.entrySocialButton}>
-                        <Image source={require('../src/img/google-icon-logo.png')} style={styles.icon} />
-                        <Text style={styles.entrySocialButtonText}>Войти через Google</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.entrySocialButton}>
-                    <Image source={require('../src/img/facebook-icon-logo.png')} style={styles.icon} />
-                        <Text style={styles.entrySocialButtonText}>Войти через Facebook</Text>
-                    </TouchableOpacity>
-                    <Text style={styles.registerTitle}>Ещё нет аккаунта?</Text>
-                    <TouchableOpacity onPress={() => navigation.navigate('RegisterPage')}>
-                        <Text style={styles.registerText}>Зарегистрироваться</Text>   
-                    </TouchableOpacity>
+                    <Text style={styles.title}>Вхід</Text>
+                    <Provider store={store}>
+                        <TextInput 
+                            style={styles.input} 
+                            placeholder = 'Email/телефон'
+                            value={this.state.login}
+                            onChangeText={(val) => this.setLogin(val)}
+                        />
+                        <TextInput 
+                            style={styles.input} 
+                            placeholder = 'Пароль'
+                            autoCompleteType="password"
+                            value={this.state.password}
+                            onChangeText={(val) => this.setPassword(val)}    
+                        />                     
+                        <TouchableOpacity style={styles.entryButton} onPress={() => this.props.navigation.navigate('chooseVehicle')}>
+                            <Text style={styles.entryButonText}>Увійти</Text>                   
+                        </TouchableOpacity>            
+                        <TouchableOpacity style={styles.entrySocialButton}>
+                            <Image source={require('../src/img/google-icon-logo.png')} style={styles.icon} />
+                            <Text style={styles.entrySocialButtonText}>Увійти через Google</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.entrySocialButton}>
+                        <Image source={require('../src/img/facebook-icon-logo.png')} style={styles.icon} />
+                            <Text style={styles.entrySocialButtonText}>Увійти через Facebook</Text>
+                        </TouchableOpacity>
+                        <Text style={styles.registerTitle}>Ще не має акаунту?</Text>
+                        <TouchableOpacity onPress={() => this.props.navigation.navigate('RegisterPage')}>
+                            <Text style={styles.registerText}>Зареєструватися</Text>   
+                        </TouchableOpacity>
+                    </Provider>
                 </View>
             </View>
         );

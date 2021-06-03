@@ -15,13 +15,13 @@ export default class Documents extends React.Component {
                 <View style={styles.firstPage}>
                     <View style={styles.mainContainer}>
                         <Text style={styles.mainText}>
-                            Добавьте в ваш профиль
-                            водительское удостоверение,
-                            чтобы арендовать машину
+                            Додайте в ваш профіль
+                            водійське посвідчення,
+                            щоб орендувати машину
                         </Text>
                     </View>
                     <TouchableOpacity style={styles.addDocumentButton}>
-                        <Text style={styles.buttonText}>Добавить</Text>
+                        <Text style={styles.buttonText}>Додати</Text>
                     </TouchableOpacity>
                 </View>
 

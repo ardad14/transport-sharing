@@ -17,12 +17,29 @@ export default class Rules extends React.Component {
                     <Text style={styles.text}>Transport Sharing</Text>
                 </View>
                 <View style={styles.textContainer}>
-                    <Title>Условия и положения</Title>
-                    <Caption>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-                        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                         culpa qui officia deserunt mollit anim id est laborum.
+                    <Title>Умови та положення</Title>
+                    <Caption>1. Хто має право на отримання знижки в розмірі 5%
+
+                                1.1 Постійні клієнти
+
+                                До постійним клієнтам відноситься категорія користувачів, які користувалися
+                                сервісом більше 5 раз за останній календарний рік.
+
+                                1.2 Сумлінні користувачі
+
+                                Користувачі, які мають високий рейтинг в додатку, тобто не допустили ні; ''
+                                одного порушення.
+
+                                2. Хто має право на отримання знижки в розмірі 10%
+
+                                    2.1 Школярі та студенти
+                                    При вказівці в профілі навчального закладу, учні та студенти можуть мати знижку протягом усього періоду навчання.
+
+                                2.2 Пенсіонери
+
+                                При додаванні в профіль пенсійного посвідчення користувач може отримати знижку
+
+                                ВАЖЛИВО: Одночасно можна користуватися тільки одним типом знижки. Якщо користувач потрапляє під кілька пунктів даного положення, то він має право вибирати знижку, яка йому підходить.
                     </Caption>
                 </View>               
             </View>

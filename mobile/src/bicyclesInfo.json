@@ -6,7 +6,8 @@
         "wheelSize": "27.5``",
         "manufacturingYear": "2021",
         "buyingYear": "2021", 
-        "price":29500     
+        "price":29500,
+        "station": 1     
     },
 
     {
@@ -16,7 +17,8 @@
         "wheelSize": "28``",
         "manufacturingYear": "2020",
         "buyingYear": "2021",
-        "price":17300
+        "price":17300,
+        "station": 1
     },
 
     {
@@ -26,7 +28,8 @@
         "wheelSize": "28``",
         "manufacturingYear": "2021",
         "buyingYear": "2021",
-        "price":18800
+        "price":18800,
+        "station": 1
     },
 
     {
@@ -36,7 +39,8 @@
         "wheelSize": "28``",
         "manufacturingYear": "2021",
         "buyingYear": "2021",
-        "price":18800
+        "price":18800,
+        "station": 2
     },
 
     {
@@ -46,7 +50,8 @@
         "wheelSize": "28``",
         "manufacturingYear": "2021",
         "buyingYear": "2021",
-        "price":14100
+        "price":14100,
+        "station": 2
     },
 
     {
@@ -56,7 +61,8 @@
         "wheelSize": "28``",
         "manufacturingYear": "2021",
         "buyingYear": "2021",
-        "price":22500
+        "price":22500,
+        "station": 2
     },
 
     {
@@ -66,7 +72,8 @@
         "wheelSize": "27.5``",
         "manufacturingYear": "2021",
         "buyingYear": "2021",
-        "price":10900
+        "price":10900,
+        "station": 2
     },
 
     {
@@ -76,7 +83,8 @@
         "wheelSize": "29``",
         "manufacturingYear": "2021",
         "buyingYear": "2021",
-        "price":21100
+        "price":21100,
+        "station": 3
     },
 
     {
@@ -86,7 +94,8 @@
         "wheelSize": "28``",
         "manufacturingYear": "2021",
         "buyingYear": "2021",
-        "price":10900
+        "price":10900,
+        "station": 3
     },
 
     {
@@ -96,17 +105,19 @@
         "wheelSize": "28``",
         "manufacturingYear": "2021",
         "buyingYear": "2021",
-        "price":14900
+        "price":14900,
+        "station": 3
     },
 
     {
         "id": 11,
-        "model" : "",
+        "model" : "Marin FAIRFAX 2",
         "size": "M",
         "wheelSize": "28``",
         "manufacturingYear": "2020",
         "buyingYear": "2021",
-        "price":10900
+        "price":10900,
+        "station": 4
     },
 
     {
@@ -116,7 +127,8 @@
         "wheelSize": "28``",
         "manufacturingYear": "2021",
         "buyingYear": "2021",
-        "price":15600
+        "price":15600,
+        "station": 4
     },
 
     {
@@ -126,7 +138,8 @@
         "wheelSize": "28``",
         "manufacturingYear": "2021",
         "buyingYear": "2021",
-        "price":18800
+        "price":18800,
+        "station": 4
     },
     
     {
@@ -136,7 +149,8 @@
         "wheelSize": "28``",
         "manufacturingYear": "2021",
         "buyingYear": "2021",
-        "price":18800
+        "price":18800,
+        "station": 5
     },
 
     {
@@ -146,7 +160,8 @@
         "wheelSize": "29``",
         "manufacturingYear": "2021",
         "buyingYear": "2021",
-        "price":21100
+        "price":21100,
+        "station": 5
     },
 
     {
@@ -156,7 +171,8 @@
         "wheelSize": "28``",
         "manufacturingYear": "2021",
         "buyingYear": "2021",
-        "price":14900
+        "price":14900,
+        "station": 5
     },
 
     {
@@ -166,7 +182,8 @@
         "wheelSize": "27.5``",
         "manufacturingYear": "2021",
         "buyingYear": "2021",
-        "price": 20000
+        "price": 20000,
+        "station": 5
     },
 
     {
@@ -176,7 +193,8 @@
         "wheelSize": "27.5``",
         "manufacturingYear": "2021",
         "buyingYear": "2021",
-        "price":21000
+        "price":21000,
+        "station": 6
     },
 
     {
@@ -186,7 +204,8 @@
         "wheelSize": "28``",
         "manufacturingYear": "2021",
         "buyingYear": "2021",
-        "price": 23100
+        "price": 23100,
+        "station": 6
     },
 
     {
@@ -195,7 +214,8 @@
         "size": "L","wheelSize": "27.5``",
         "manufacturingYear": "2021",
         "buyingYear": "2021",
-        "price":25600
+        "price":25600,
+        "station": 6
     },
 
     {
@@ -205,7 +225,8 @@
         "wheelSize": "28``",
         "manufacturingYear": "2021",
         "buyingYear": "2021",
-        "price":18800
+        "price":18800,
+        "station": 6
     },
 
     {
@@ -215,7 +236,8 @@
         "wheelSize": "28``",
         "manufacturingYear": "2021",
         "buyingYear": "2021",
-        "price": 18800
+        "price": 18800,
+        "station": 7
     },
 
     {
@@ -225,7 +247,8 @@
         "wheelSize": "29``",
         "manufacturingYear": "2021",
         "buyingYear": "2021",
-        "price":21100
+        "price":21100,
+        "station": 7
     },
 
     {
@@ -235,7 +258,8 @@
         "wheelSize": "28``",
         "manufacturingYear": "2021",
         "buyingYear": "2021",
-        "price": 28300
+        "price": 28300,
+        "station": 7
     },
 
     {
@@ -245,7 +269,8 @@
         "wheelSize": "28``",
         "manufacturingYear": "2021",
         "buyingYear": "2021",
-        "price":14100
+        "price":14100,
+        "station": 8
     },
 
     {
@@ -255,7 +280,8 @@
         "wheelSize": "28``",
         "manufacturingYear": "2021",
         "buyingYear": "2021",
-        "price": 22500
+        "price": 22500,
+        "station": 8
     },
 
     {
@@ -265,7 +291,8 @@
         "wheelSize": "28``",
         "manufacturingYear": "2021",
         "buyingYear": "2021",
-        "price": 22500
+        "price": 22500,
+        "station": 8
     },
 
     {
@@ -275,7 +302,8 @@
         "wheelSize": "28``",
         "manufacturingYear": "2021",
         "buyingYear": "2021",
-        "price": 22500
+        "price": 22500,
+        "station": 9
     },
 
     {
@@ -285,7 +313,8 @@
         "wheelSize": "29``",
         "manufacturingYear": "2021",
         "buyingYear": "2021",
-        "price": 21100
+        "price": 21100,
+        "station": 9
     },
 
     {
@@ -295,7 +324,8 @@
         "wheelSize": "28``",
         "manufacturingYear": "2021",
         "buyingYear": "2021",
-        "price": 14180
+        "price": 14180,
+        "station": 9
     },
 
     {
@@ -305,7 +335,8 @@
         "wheelSize": "28``",
         "manufacturingYear": "2021",
         "buyingYear": "2021",
-        "price": 14900
+        "price": 14900,
+        "station": 9
     },
 
     {
@@ -315,7 +346,8 @@
         "wheelSize": "28``",
         "manufacturingYear": "2021",
         "buyingYear": "2021",
-        "price": 25600
+        "price": 25600,
+        "station": 10
     },
 
     {
@@ -325,7 +357,8 @@
         "wheelSize": "27.5``",
         "manufacturingYear": "2021",
         "buyingYear": "2021",
-        "price": 24000
+        "price": 24000,
+        "station": 10
     },
 
     {
@@ -335,7 +368,8 @@
         "wheelSize": "27.5``",
         "manufacturingYear": "2021",
         "buyingYear": "2021",
-        "price": 25700
+        "price": 25700,
+        "station": 10
     },
 
     {
@@ -345,7 +379,8 @@
         "wheelSize": "27.5``",
         "manufacturingYear": "2021",
         "buyingYear": "2021",
-        "price": 26600
+        "price": 26600,
+        "station": 11
     },
 
     {
@@ -355,7 +390,8 @@
         "wheelSize": "28``",
         "manufacturingYear": "2021",
         "buyingYear": "2021",
-        "price": 28300 
+        "price": 28300,
+        "station": 11
     },
 
     {
@@ -365,7 +401,8 @@
         "wheelSize": "27.5``",
         "manufacturingYear": "2021",
         "buyingYear": "2021",
-        "price": 26600
+        "price": 26600,
+        "station": 11
     },
 
     {
@@ -375,7 +412,8 @@
         "wheelSize": "28``",
         "manufacturingYear": "2021",
         "buyingYear": "2021",
-        "price": 28300
+        "price": 28300,
+        "station": 12
     },
 
     {
@@ -384,7 +422,8 @@
         "size": "S",
         "wheelSize": "28``",
         "manufacturingYear": "2020","buyingYear": "2021",
-        "price": 15900
+        "price": 15900,
+        "station": 12
     },
 
     {
@@ -394,7 +433,8 @@
         "wheelSize": "28``",
         "manufacturingYear": "2020",
         "buyingYear": "2021",
-        "price": 18700
+        "price": 18700,
+        "station": 12
     },
 
     {
@@ -404,7 +444,8 @@
         "wheelSize": "28``",
         "manufacturingYear": "2020",
         "buyingYear": "2021",
-        "price": 14100
+        "price": 14100,
+        "station": 12
     },
 
     {
@@ -414,7 +455,8 @@
         "wheelSize": "28``",
         "manufacturingYear": "2020",
         "buyingYear": "2021",
-        "price": 18900
+        "price": 18900,
+        "station": 13
     },
 
     {
@@ -424,7 +466,8 @@
         "wheelSize": "28``",
         "manufacturingYear": "2020",
         "buyingYear": "2021",
-        "price": 15900
+        "price": 15900,
+        "station": 13
     },
 
     {
@@ -434,7 +477,8 @@
         "wheelSize": "28``",
         "manufacturingYear": "2020",
         "buyingYear": "2021",
-        "price": 21900
+        "price": 21900,
+        "station": 13
     },
 
     {
@@ -444,7 +488,8 @@
         "wheelSize": "28``",
         "manufacturingYear": "2020",
         "buyingYear": "2021",
-        "price": 16000
+        "price": 16000,
+        "station": 13
     },
 
     {
@@ -454,7 +499,8 @@
         "wheelSize": "28``",
         "manufacturingYear": "2020",
         "buyingYear": "2021",
-        "price": 21800
+        "price": 21800,
+        "station": 14
     },
 
     {
@@ -464,7 +510,8 @@
         "wheelSize": "26``",
         "manufacturingYear": "2015",
         "buyingYear": "2021",
-        "price": 18100
+        "price": 18100,
+        "station": 14
     },
 
     {
@@ -474,7 +521,8 @@
         "wheelSize": "28``",
         "manufacturingYear": "2020",
         "buyingYear": "2021",
-        "price": 16800
+        "price": 16800,
+        "station": 14
     },
 
     {
@@ -484,7 +532,8 @@
         "wheelSize": "29``",
         "manufacturingYear": "2021",
         "buyingYear": "2021",
-        "price": 21300
+        "price": 21300,
+        "station": 14
     },
 
     {
@@ -494,7 +543,8 @@
         "wheelSize": "28``",
         "manufacturingYear": "2014",
         "buyingYear": "2021",
-        "price": 14300
+        "price": 14300,
+        "station": 14
     },
 
     {
@@ -504,7 +554,8 @@
         "wheelSize": "26``",
         "manufacturingYear": "2014",
         "buyingYear": "2021",
-        "price": 14600
+        "price": 14600,
+        "station": 15
     },
 
     {
@@ -514,7 +565,8 @@
         "wheelSize": "28``",
         "manufacturingYear": "2016",
         "buyingYear": "2021",
-        "price": 21800
+        "price": 21800,
+        "station": 15
     },
 
     {
@@ -524,7 +576,8 @@
         "wheelSize": "28``",
         "manufacturingYear": "2016",
         "buyingYear": "2021",
-        "price": 19800
+        "price": 19800,
+        "station": 15
     },
 
     {
@@ -534,7 +587,8 @@
         "wheelSize": "28``",
         "manufacturingYear": "2014",
         "buyingYear": "2021",
-        "price": 14600
+        "price": 14600,
+        "station": 15
     },
 
     {
@@ -544,7 +598,8 @@
         "wheelSize": "27.5``",
         "manufacturingYear": "2020",
         "buyingYear": "2021",
-        "price": 24800
+        "price": 24800,
+        "station": 5
     },
 
     {
@@ -554,7 +609,8 @@
         "wheelSize": "28``",
         "manufacturingYear": "2016",
         "buyingYear": "2021",
-        "price": 18700
+        "price": 18700,
+        "station": 7
     },
 
     {
@@ -564,7 +620,8 @@
         "wheelSize": "28``",
         "manufacturingYear": "2014",
         "buyingYear": "2021",
-        "price": 17000
+        "price": 17000,
+        "station": 11
     },
 
     {
@@ -574,9 +631,10 @@
         "wheelSize": "29``",
         "manufacturingYear": "2020",
         "buyingYear": "2021",
-        "price": 24500
+        "price": 24500,
+        "station": 3
     },
-    
+
     {
         "id": 59,
         "model" : "Cannondale BAD BOY 2",
@@ -584,7 +642,8 @@
         "wheelSize": "28``",
         "manufacturingYear": "2016",
         "buyingYear": "2021",
-        "price": 23500
+        "price": 23500,
+        "station": 12
     },
 
     {
@@ -594,7 +653,8 @@
         "wheelSize": "28``",
         "manufacturingYear": "2014",
         "buyingYear": "2021",
-        "price": 23500
+        "price": 23500,
+        "station": 8
     }
 
 ]

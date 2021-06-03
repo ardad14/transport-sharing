@@ -4,6 +4,7 @@ import {
     Text, 
     StyleSheet, 
     View, 
+    Alert,
     TouchableWithoutFeedback,
     FlatList, 
     Image, 
@@ -11,24 +12,30 @@ import {
 from 'react-native'
 import bicycles from '../src/bicyclesInfo.json';
 import RentAlert from '../screens/RentAlert.js';
+import { set } from 'react-native-reanimated';
 
-const bicyclesAmount = bicycles.length
 const itemHeight = 100
+bicyclesAmount = 4
+function setValue(key, value) {
+    key = value
+}
 
 export default class BicycleModal extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
             show: false,
-            data: bicycles,
+            data: [],
             stNumber: '',
-            stAddres: ''
+            stAddres: ''            
         }
-    }
+    }   
 
-    show = (number, addres) => {
+    show = (number, addres) => {    
         this.state.stNumber = number
-        this.state.stAddres = addres
+        this.state.stAddres = addres        
+        this.state.data = bicycles.filter(element => element.station == number);
+        setValue(bicyclesAmount, this.state.data.length)
         this.setState({show: true})
     }
 
@@ -53,7 +60,7 @@ export default class BicycleModal extends React.Component {
         return (
             <View>
                 <Text style={styles.modalHeaderText}>
-                    {stationNumber}                    
+                    Станція №{stationNumber}                    
                 </Text>
                 <Text style={styles.modalHeaderText}>
                     {addres}                    
@@ -66,6 +73,7 @@ export default class BicycleModal extends React.Component {
                
         return (
             <View style={{flex: 1, alignItems: 'flex-start'}}>
+                {/*<Text>{this.data.length}</Text>*/}
                 <FlatList
                     style={{marginBottom: 20, width: "100%"}}
                     showsVerticalScrollIndicator={false}
@@ -91,7 +99,7 @@ export default class BicycleModal extends React.Component {
                         <View style={[styles.row, {marginTop: 15}]}>
                             <Text style={styles.rateText}>50 грн/час</Text>
                             <TouchableOpacity style={styles.pickButton}>
-                                <Text style={styles.pickButtonText} >Выбрать</Text>
+                                <Text style={styles.pickButtonText} >Обрати</Text>
                             </TouchableOpacity>
                         </View>
                     </View>                
@@ -99,11 +107,22 @@ export default class BicycleModal extends React.Component {
             </View>
             
         )
-    }    
+    }
+    
+    Timer = () => {
+        return (
+            <View style={styles.rentAlert}>
+                <Text>Что вы хотите?</Text>
+            </View>
+        )
+        
+    }
 
     render() {
         let {show} = this.state
         const {onTouchOutside} = this.props
+
+        
 
         return(
             <Modal
@@ -189,6 +208,13 @@ const styles = StyleSheet.create ({
     pickButtonText: {
         color: "#ffffff",
         fontSize: 18
+    },
+
+    rentAlert: {
+        width: "60%",
+        height: 400,
+        borderRadius: 15,
+        backgroundColor: '#bccfc1'
     }
 
 })

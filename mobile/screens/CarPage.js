@@ -4,6 +4,8 @@ import MapView, {PROVIDER_GOOGLE, Marker, Callout} from 'react-native-maps';
 import locations from '../src/carMarkers.json';
 import {DrawerActions} from '@react-navigation/native';
 
+import CarModal from '../modals/carModal.js'
+
 
 export default class CarPage extends React.Component 
 {
@@ -16,6 +18,17 @@ export default class CarPage extends React.Component
     } 
 
     render() {
+
+        let popupRef = React.createRef()
+
+        const onShowPopup = (title, addres) => {           
+            popupRef.show(title, addres)
+        }
+ 
+        const onClosePopup = () => {
+            popupRef.close()
+        }
+
         return (
             <View style={styles.window}>
                 <View style={styles.header}>
@@ -42,16 +55,9 @@ export default class CarPage extends React.Component
                                     latitude: marker.latitude,
                                     longitude: marker.longitude,
                                 }}
+                                onPress={() => onShowPopup(marker.id)}
                                 icon={require('../src/img/car_icon.png')}
-                                >
-                                    <Callout tooltip>
-                                        <View>
-                                            <View style={styles.infoField}>
-                                                <Text style={styles.bikeName}>{marker.title}</Text>
-                                                <Text >{marker.descript}</Text>
-                                            </View>
-                                        </View>
-                                    </Callout>
+                                >                                    
                                 </Marker>
 
 
@@ -64,16 +70,23 @@ export default class CarPage extends React.Component
                 <View style={styles.buttonContainer}>
                         <TouchableOpacity style={styles.toBicyclePage} onPress={() => this.props.navigation.navigate('BicyclePage')}>
                             <Image style={styles.BicycleImage} source={require('../src/img/green-bike-navb.png')}/>
-                            <Text style={styles.BicycleText}>Карта велосипедов</Text>                   
+                            <Text style={styles.BicycleText}>Карта велосипедів</Text>                   
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.toScooterPage} onPress={() => this.props.navigation.navigate('ScooterPage')}>
                             <Image style={styles.ScooterImage} source={require('../src/img/green-scooter-navb.png')}/>
-                            <Text style={styles.buttonScooterText}>Карта самокатов</Text>                   
+                            <Text style={styles.buttonScooterText}>Карта самокатів</Text>                   
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.toCarPage} >
                             <Image style={styles.CarImage} source={require('../src/img/white-car-navb.png')}/>
-                            <Text style={styles.buttonCarText}>Карта автомобилей</Text>                   
+                            <Text style={styles.buttonCarText}>Карта автомобілей</Text>                   
                         </TouchableOpacity>
+                </View>
+                <View>
+                <CarModal                    
+                    ref={(target) => popupRef = target}
+                    onTouchOutside={onClosePopup}
+                    navigation={this.props.navigation}                
+                />
                 </View>
             </View>
         );
@@ -209,6 +222,7 @@ const styles = StyleSheet.create ({
 
     buttonScooterText: 
     {
+        width: 80,
         textAlign: 'center',
     },
 
@@ -228,6 +242,7 @@ const styles = StyleSheet.create ({
     {
         width: 45,
         height: 40,
+        
     },
 
     CarImage:

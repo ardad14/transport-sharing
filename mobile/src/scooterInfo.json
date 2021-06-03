@@ -1,0 +1,548 @@
+[
+    {
+        "id": 1,
+        "model" : "Xiaomi Mijia Electric Scooter Pro 2",
+        "size": "S",
+        "chargeVolume": 12.8,
+        "charge": 100,
+        "powerReserve": 45,
+        "power": 300,
+        "maxWeight": 100,
+        "station": 1,
+        "price":19300
+    },
+
+    {
+        "id": 2,
+        "model" : "Xiaomi Mijia Electric Scooter 1S",
+        "size": "S",
+        "chargeVolume": 9.8,
+        "charge": 100,
+        "powerReserve": 30,
+        "power": 250,
+        "maxWeight": 100,
+        "station": 1,
+        "price": 14400 
+    },
+
+    {
+        "id": 3,
+        "model" : "Xiaomi Mi Electric Scooter Essential",
+        "size": "S",
+        "chargeVolume": 9.8,
+        "charge": 100,
+        "powerReserve": 20,
+        "power": 250,
+        "maxWeight": 100,
+        "station": 1,
+        "price": 11500 
+    },
+
+    {
+        "id": 4,
+        "model" : "Segway Ninebot MAX G30LE",
+        "size": "S",
+        "chargeVolume": 10.8,
+        "charge":100,
+        "powerReserve": 40,
+        "power":350,
+        "maxWeight":100,
+        "station":2,
+        "price":21000 
+    },
+
+    {
+        "id": 5,
+        "model" : "Proove X-City Pro",
+        "size": "S",
+        "chargeVolume": 10.4,
+        "charge":100,
+        "powerReserve": 45,
+        "power":350,
+        "maxWeight":100,
+        "station":2,
+        "price":15500
+    },
+
+    {
+        "id": 6,
+        "model" : "Segway Ninebot E10",
+        "size": "S",
+        "chargeVolume": 2.55,
+        "charge":100,
+        "powerReserve": 10,
+        "power":200,
+        "maxWeight":100,
+        "station":2,
+        "price":10200
+    },
+
+    {
+        "id": 7,
+        "model" : "Kugoo S3 Pro",
+        "size": "S",
+        "chargeVolume": 7.8 ,
+        "charge": 100,
+        "powerReserve": 25,
+        "power": 350,
+        "maxWeight": 100,
+        "station": 3,
+        "price": 9600
+    },
+
+    {
+        "id": 8,
+        "model" : "Maxxter Teo Plus",
+        "size": "S",
+        "chargeVolume": 7.8,
+        "charge": 100,
+        "powerReserve": 25,
+        "power":300,
+        "maxWeight":100,
+        "station": 3,
+        "price": 11600
+    },
+
+    {
+        "id": 9,
+        "model" : "E-Scooter M365 Premium",
+        "size": "S",
+        "chargeVolume": 9.6,
+        "charge":100,
+        "powerReserve": 30,
+        "power": 350,
+        "maxWeight":100,
+        "station": 3,
+        "price": 7400
+    },
+
+    {
+        "id": 10,
+        "model" : "AirBike Pro",
+        "size": "B",
+        "chargeVolume": 12.5 ,
+        "charge": 100,
+        "powerReserve": 50,
+        "power": 500,
+        "maxWeight": 100,
+        "station":4 ,
+        "price": 24000
+    },
+
+    {
+        "id": 11,
+        "model" : "AirBike Smart",
+        "size": "S",
+        "chargeVolume": 7.5,
+        "charge": 100,
+        "powerReserve": 30,
+        "power": 380,
+        "maxWeight": 100,
+        "station": 4,
+        "price": 12200
+    },
+
+    {
+        "id": 12,
+        "model" : "Xiaomi Mijia Electric Scooter",
+        "size": "S",
+        "chargeVolume": 7.8,
+        "charge": 100,
+        "powerReserve": 30,
+        "power": 250,
+        "maxWeight": 100,
+        "station": 4,
+        "price": 12600
+    },
+
+    {
+        "id": 13,
+        "model" : "Proove X-City Lite",
+        "size": "S",
+        "chargeVolume": 7.5,
+        "charge": 100,
+        "powerReserve": 25,
+        "power": 250,
+        "maxWeight": 100,
+        "station": 5,
+        "price": 10200
+    },
+
+    {
+        "id": 14,
+        "model" : "Segway Ninebot E22E",
+        "size": "S",
+        "chargeVolume": 5.1,
+        "charge": 100,
+        "powerReserve": 22,
+        "power": 300,
+        "maxWeight": 100,
+        "station": 5,
+        "price": 13200
+    },
+
+    {
+        "id": 15,
+        "model" : "AirBike Comfort",
+        "size": "S",
+        "chargeVolume": 10,
+        "charge":100,
+        "powerReserve": 25,
+        "power": 350,
+        "maxWeight":100,
+        "station": 5,
+        "price": 17100
+    },
+
+    {
+        "id": 16,
+        "model" : "Segway Ninebot E25E",
+        "size": "S",
+        "chargeVolume": 5.96,
+        "charge":100,
+        "powerReserve": 25,
+        "power": 300,
+        "maxWeight":100,
+        "station": 6,
+        "price": 16000
+    },
+
+    {
+        "id": 17,
+        "model" : "Proove X-City",
+        "size": "S",
+        "chargeVolume": 6.4,
+        "charge":100,
+        "powerReserve": 25,
+        "power": 350,
+        "maxWeight":100,
+        "station": 6,
+        "price": 12500
+    },
+
+    {
+        "id": 18,
+        "model" : "Xiaomi Mijia Electric Scooter M365 Pro",
+        "size": "S",
+        "chargeVolume": 12.8,
+        "charge":100,
+        "powerReserve": 45,
+        "power": 300,
+        "maxWeight":100,
+        "station": 6,
+        "price": 15600
+    },
+
+    {
+        "id": 19,
+        "model" : "Segway Ninebot KickScooter MAX G30",
+        "size": "S",
+        "chargeVolume": 15.3,
+        "charge":100,
+        "powerReserve": 65,
+        "power": 350,
+        "maxWeight":100,
+        "station": 7,
+        "price": 22600
+    },
+
+    {
+        "id": 20,
+        "model" : "Ninebot KickScooter MAX G30P",
+        "size": "S",
+        "chargeVolume": 15,
+        "charge":100,
+        "powerReserve": 50,
+        "power": 350,
+        "maxWeight":100,
+        "station": 7,
+        "price": 21700
+    },
+
+    {
+        "id": 21,
+        "model" : "Segway Ninebot KickScooter ES2",
+        "size": "S",
+        "chargeVolume": 5.2,
+        "charge":100,
+        "powerReserve": 25,
+        "power": 300,
+        "maxWeight":100,
+        "station": 7,
+        "price": 13100
+    },
+
+    {
+        "id": 22,
+        "model" : "Cecotec Bongo A Advance Connected Max",
+        "size": "S",
+        "chargeVolume": 6.4,
+        "charge":100,
+        "powerReserve": 45,
+        "power": 350,
+        "maxWeight":100,
+        "station": 8,
+        "price": 16000
+    },
+
+    {
+        "id": 23,
+        "model" : "Maxxter Teo Max",
+        "size": "S",
+        "chargeVolume": 10.4,
+        "charge": 100,
+        "powerReserve": 30,
+        "power": 350,
+        "maxWeight":100,
+        "station": 8,
+        "price": 12100
+    },
+
+    {
+        "id": 24,
+        "model" : "Cecotec Bongo A Connected",
+        "size": "S",
+        "chargeVolume": 6.4,
+        "charge": 100,
+        "powerReserve": 25,
+        "power": 350,
+        "maxWeight": 100,
+        "station": 8,
+        "price": 12100
+    },
+
+    {
+        "id": 25,
+        "model" : "Maxxter Teo",
+        "size": "S",
+        "chargeVolume": 5.2,
+        "charge": 100,
+        "powerReserve": 20,
+        "power": 250,
+        "maxWeight": 80,
+        "station": 9,
+        "price": 8500
+    },
+
+    {
+        "id": 26,
+        "model" : "Xiaomi Mijia Electric Scooter Pro",
+        "size": "S",
+        "chargeVolume": 12.8,
+        "charge": 100,
+        "powerReserve": 45,
+        "power": 360,
+        "maxWeight": 120,
+        "station": 9,
+        "price": 15800
+    },
+
+    {
+        "id": 27,
+        "model" : "Lenovo M2 Electric Scooter",
+        "size": "S",
+        "chargeVolume": 12.2,
+        "charge": 100,
+        "powerReserve": 30,
+        "power": 350,
+        "maxWeight": 120,
+        "station": 9,
+        "price": 11500
+    },
+
+    {
+        "id": 28,
+        "model" : "Crosser E9 Premium Max Air",
+        "size": "B",
+        "chargeVolume": 15,
+        "charge": 100,
+        "powerReserve": 45,
+        "power": 600,
+        "maxWeight":100,
+        "station": 10,
+        "price": 14400
+    },
+
+    {
+        "id": 29,
+        "model" : "Cecotec Bongo Z ",
+        "size": "B",
+        "chargeVolume": 10,
+        "charge": 100,
+        "powerReserve": 45,
+        "power": 500,
+        "maxWeight": 120,
+        "station": 10,
+        "price": 21400
+    },
+
+    {
+        "id": 30,
+        "model" : "Best Scooter SD-2205",
+        "size": "S",
+        "chargeVolume": 7.8,
+        "charge": 100,
+        "powerReserve": 30,
+        "power": 350,
+        "maxWeight": 110,
+        "station": 10,
+        "price": 8800
+    },
+
+    {
+        "id": 31,
+        "model" : "Crosser T4 1000W",
+        "size": "B",
+        "chargeVolume": 12.5,
+        "charge":100,
+        "powerReserve": 40,
+        "power": 1000,
+        "maxWeight": 150,
+        "station": 11,
+        "price": 15500
+    },
+
+    {
+        "id": 32,
+        "model" : "Jack Hot Alu 10.4Ah",
+        "size": "S",
+        "chargeVolume": 10.4,
+        "charge": 100,
+        "powerReserve": 28,
+        "power": 350,
+        "maxWeight": 120,
+        "station": 11,
+        "price": 5300
+    },
+
+    {
+        "id": 33,
+        "model" : "Airwheel Z3",
+        "size": "S",
+        "chargeVolume": 4.5,
+        "charge": 100,
+        "powerReserve": 20,
+        "power": 350,
+        "maxWeight": 100,
+        "station": 11,
+        "price": 16200
+    },
+
+    {
+        "id": 34,
+        "model" : "Speedway S3 Max",
+        "size": "B",
+        "chargeVolume": 18.2,
+        "charge": 100,
+        "powerReserve": 48,
+        "power": 800,
+        "maxWeight": 150,
+        "station": 12,
+        "price": 12600
+    },
+
+    {
+        "id": 35,
+        "model" : "Crosser E9 Premium Max Perforation 10",
+        "size": "B",
+        "chargeVolume": 15,
+        "charge":100,
+        "powerReserve": 45,
+        "power": 600,
+        "maxWeight": 120,
+        "station": 12,
+        "price": 14500
+    },
+
+    {
+        "id": 36,
+        "model" : "Like.Bike Twist",
+        "size": "S",
+        "chargeVolume": 6,
+        "charge": 100,
+        "powerReserve": 18,
+        "power": 250,
+        "maxWeight": 60,
+        "station": 12,
+        "price": 8200
+    },
+
+    {
+        "id": 37,
+        "model" : "iTrike ES 2-003",
+        "size": "S",
+        "chargeVolume": 6,
+        "charge": 100,
+        "powerReserve": 20,
+        "power": 250,
+        "maxWeight":120,
+        "station": 13,
+        "price": 8700
+    },
+
+    {
+        "id": 38,
+        "model" : "Crosser E9 Premium",
+        "size": "S",
+        "chargeVolume": 7.8,
+        "charge":100,
+        "powerReserve": 30,
+        "power": 350,
+        "maxWeight": 120,
+        "station": 13,
+        "price": 10300
+    },
+
+    {
+        "id": 39,
+        "model" : "Kugoo S1 Plus",
+        "size": "S",
+        "chargeVolume": 7.5,
+        "charge": 100,
+        "powerReserve": 30,
+        "power": 350,
+        "maxWeight": 120,
+        "station": 13,
+        "price": 12500
+    },
+
+    {
+        "id": 40,
+        "model" : "Crosser E9 Premium 10",
+        "size": "B",
+        "chargeVolume": 7.5,
+        "charge": 100,
+        "powerReserve": 30,
+        "power": 500,
+        "maxWeight":120,
+        "station": 14,
+        "price": 10400
+    },
+
+    {
+        "id": 41,
+        "model" : "Like.Bike Solo",
+        "size": "B",
+        "chargeVolume": 10,
+        "charge": 100,
+        "powerReserve": 40,
+        "power": 1000,
+        "maxWeight":150,
+        "station": 14,
+        "price": 21600
+    },
+
+    {
+        "id": 42,
+        "model" : "Kugoo X1",
+        "size": "B",
+        "chargeVolume": 13,
+        "charge": 100,
+        "powerReserve": 45,
+        "power": 600,
+        "maxWeight": 120,
+        "station": 14,
+        "price": 21700
+    }
+
+]

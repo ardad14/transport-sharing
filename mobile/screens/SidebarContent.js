@@ -36,8 +36,8 @@ export default class SidebarContent extends React.Component
                       style={styles.userAvatar}
                   />
                   <View style={styles.userInfo}>
-                    <Title style={styles.title}>Артём Купцов</Title>
-                    <Caption style={styles.city}>Харьков</Caption>
+                    <Title style={styles.title}>Артем Купцов</Title>
+                    <Caption style={styles.city}>Харків</Caption>
                   </View>
               </View>
               <View style={styles.column}>
@@ -50,7 +50,7 @@ export default class SidebarContent extends React.Component
                           />}
                           <Paragraph style={styles.paragraph}>20 UAH</Paragraph>
                           <TouchableOpacity style={styles.addMoneyButton}>
-                              <Text style={styles.addMoneyText}>Пополнить</Text>
+                              <Text style={styles.addMoneyText}>Поповнити</Text>
                           </TouchableOpacity>
                       </View> 
                   </View>
@@ -60,13 +60,13 @@ export default class SidebarContent extends React.Component
               <DrawerItem
                   icon={({color, size}) => (
                   <Icon
-                      name='account-outline'
+                      name='map-outline'
                       color={color}
                       size={size}
                   />
                   )}
-                  label="Профиль"
-                  onPress={() => this.props.navigation.navigate('Profile')}
+                  label="Карта"
+                  onPress={() => this.props.navigation.navigate('chooseVehicle')}
               />
 
               <DrawerItem
@@ -77,7 +77,7 @@ export default class SidebarContent extends React.Component
                       size={size}
                   />
                   )}
-                  label="Все сеансы аренды"
+                  label="Усі сеанси аренди"
                   onPress={() => this.props.navigation.navigate('AllRecords')}
               />
 
@@ -89,7 +89,7 @@ export default class SidebarContent extends React.Component
                       size={size}
                   />
                   )}
-                  label="Документы"
+                  label="Документи"
                   onPress={() => this.props.navigation.navigate('Documents')}
               />     
 
@@ -101,7 +101,7 @@ export default class SidebarContent extends React.Component
                       size={size}
                   />
                   )}
-                  label="Настройки"
+                  label="Налаштування"
                   onPress={() => this.props.navigation.navigate('Settings')}
               />     
 
@@ -125,7 +125,7 @@ export default class SidebarContent extends React.Component
                       size={size}
                   />
                   )}
-                  label="Помощь"
+                  label="Допомога"
                   onPress={() => this.props.navigation.navigate('Help')}
               />                       
 
@@ -137,7 +137,7 @@ export default class SidebarContent extends React.Component
                       size={size}
                   />
                   )}
-                  label="Выйти"
+                  label="Вийти"
                   onPress={() => this.props.navigation.navigate('EntryPage')}
               />
             </View>

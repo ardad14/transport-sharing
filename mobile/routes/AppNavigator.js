@@ -16,6 +16,7 @@ import Settings from '../screens/Settings.js';
 import Rules from '../screens/Rules.js';
 import Help from '../screens/Help.js';
 import SidebarContent from '../screens/SidebarContent.js'
+import RentAlert from '../screens/RentAlert.js';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -46,6 +47,14 @@ function chooseVehicle()
                 } 
                 component={CarPage} 
             />
+            <Tab.Screen 
+                name="RentAlert" 
+                options={
+                    {tabBarVisible: false}
+                } 
+                component={RentAlert} 
+            />
+
         </Tab.Navigator>
     );
 }
@@ -56,7 +65,8 @@ function stackNavigator()
         <Stack.Navigator initialRouteName="EntryPage" headerMode='none'>
             <Stack.Screen name="EntryPage" component={EntryPage} />
             <Stack.Screen name="RegisterPage" component={RegisterPage} />                
-            <Stack.Screen name="chooseVehicle" component={chooseVehicle} />           
+            <Stack.Screen name="chooseVehicle" component={chooseVehicle} />
+            <Stack.Screen name="RentAlert" component={RentAlert} />            
         </Stack.Navigator>   
     );          
 }

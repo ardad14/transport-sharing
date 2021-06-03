@@ -1,87 +1,157 @@
 import React from 'react';
-import {Text, View, StyleSheet, TextInput, Image, TouchableOpacity} from 'react-native';
+import {Text, View, StyleSheet, TextInput, Image, TouchableOpacity, Alert} from 'react-native';
 import * as Font from 'expo-font';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import {Picker} from '@react-native-picker/picker';
+import users from '../data/users.json'
+import DateTimePicker from '@react-native-community/datetimepicker';
 
-export default function RegisterPage  ({ navigation })
-{
-    return (
-        <View style={styles.window}>
-            <View style={styles.header}>
-                <Text style={styles.text}>Transport Sharing</Text>
+export default class RegisterPage extends React.Component {
+
+    constructor(props) {
+        super(props)        
+        this.state = {
+            date: new Date(1598051730000),
+            show: false,
+            name: '',
+            lastname: '',
+            email: '',
+            phone: '',
+            birthday: '',
+            password: '' 
+        };
+        this.setDate = this.setDate.bind(this);
+        this.setShow = this.setShow.bind(this);       
+    }
+
+    setDate(newDate) {
+        this.setState({ date: newDate });
+    }
+
+    setShow() {
+        this.setState({ show: true });
+    }
+
+    onChange = (event, selectedDate) => {
+    const currentDate = selectedDate;    
+    setDate(currentDate);
+    };
+
+    setName(value) {
+        this.setState({name: value})
+    }
+
+    setLastname(value) {
+        this.setState({lastname: value})
+    }
+
+    setEmail(value) {
+        this.setState({email: value})
+    }
+    
+    setPhone(value) {
+        this.setState({phone: value})
+    }
+
+    setBirthday(value) {
+        this.setState({birthday: value})
+    }
+
+    setPassword(value) {
+        this.setState({password: value})
+    }
+
+    register() {
+        Alert.alert("register")
+        if(this.state.name == '') {
+            this.state.name = "Неправильне ім'я"
+            return 
+        }
+        users.push([this.state.name, this.state.lastname, this.state.email])
+    }
+
+
+    render() {
+        return (
+            <View style={styles.window}>
+                <View style={styles.header}>
+                    <Text style={styles.text}>Transport Sharing</Text>
+                </View>
+                <View style={styles.mainContainer}>
+                    <View style={styles.mainContent}>  
+                        <Text style={styles.title}>Реєстрація</Text>
+                        <TextInput 
+                            style={styles.input} 
+                            placeholder = "Ім'я"
+                            autoCompleteType='name'
+                            value={this.state.name}
+                            onChangeText={(name) => this.setState({name})}
+                        />  
+                        <TextInput 
+                            style={styles.input} 
+                            placeholder = 'Прізвище'
+                            autoCompleteType='name'
+                            value={this.state.lastname}
+                            onChangeText={(lastname) => this.setState({lastname})}
+                        />
+                        <TextInput 
+                            style={styles.input} 
+                            placeholder = 'Электронна адреса'
+                            autoCompleteType='email'
+                            value={this.state.email}
+                            onChangeText={(email) => this.setState({email})}                        
+                        /> 
+                        <TextInput 
+                            style={styles.input} 
+                            placeholder = 'Телефон'
+                            autoCompleteType='tel'
+                            value={this.state.phone}
+                            onChangeText={(phone) => this.setState({phone})}
+                        />
+                        <TouchableOpacity>
+                            <TextInput 
+                            style={styles.input} 
+                            placeholder = 'Дата народження'
+                            value={this.state.birthday}
+                            onChangeText={(birthday) => this.setState({birthday})}                            
+                            />
+                        </TouchableOpacity>             
+                        <TextInput 
+                            style={styles.input} 
+                            placeholder = 'Пароль'
+                            autoCompleteType='password'
+                            secureTextEntry={true}
+                            value={this.state.password}
+                            onChangeText={(password) => this.setState({password})}
+                        />
+                        <TextInput 
+                            style={styles.input} 
+                            placeholder = 'Повторіть пароль'
+                            autoCompleteType='password'
+                            secureTextEntry={true}
+                            value={this.state.password}
+                        />
+                        <TextInput style={styles.input} placeholder = 'Оберіть місто'/>      
+                        {/*<DateTimePicker
+                            testID="dateTimePicker"
+                            disabled={true}
+                            value={this.state.date}
+                            mode={'date'}
+                            is24Hour={true}
+                            display="default"
+                            //onChange={onChange}
+                        />*/}
+                        
+                        <TouchableOpacity style={styles.entryButton} onPress={() => this.register()}>
+                            <Text style={styles.entryButonText}>Зареєструватися</Text>                   
+                        </TouchableOpacity>            
+                        <Text style={styles.registerTitle}>Вже є акаунт?</Text>
+                        <TouchableOpacity onPress={() => this.props.navigation.navigate("EntryPage")}>
+                            <Text style={styles.registerText}>Увійти</Text>   
+                        </TouchableOpacity>
+                    </View>
+                </View>
             </View>
-            <View style={styles.mainContainer}>  
-                <Text style={styles.title}>Регистрация</Text>
-                <TextInput style={styles.input} placeholder = 'Имя'/>
-                <TextInput style={styles.input} placeholder = 'Фамилия'/>
-                <TextInput style={styles.input} placeholder = 'Электронный адрес'/> 
-                <TextInput style={styles.input} placeholder = 'Телефон'/> 
-                <Text style={styles.greytext}>Дата рождения:</Text>      
-                <Picker>
-                <   Picker.Item label="Java" value="java" />
-                    <Picker.Item label="JavaScript" value="js" />           
-                </Picker>  
-                {/*<Picker>
-                    <Picker.Item label="январь" value=""></Picker.Item>    
-                    <Picker.Item label="февраль" value=""></Picker.Item>  
-                    <Picker.Item label="март" value=""></Picker.Item>  
-                    <Picker.Item label="апрель" value=""></Picker.Item>  
-                    <Picker.Item label="май" value=""></Picker.Item>  
-                    <Picker.Item label="июнь" value=""></Picker.Item>  
-                    <Picker.Item label="июль" value=""></Picker.Item>  
-                    <Picker.Item label="август" value=""></Picker.Item>  
-                    <Picker.Item label="сентябрь" value=""></Picker.Item>  
-                    <Picker.Item label="октябрь" value=""></Picker.Item>  
-                    <Picker.Item label="ноябрь" value=""></Picker.Item>  
-                    <Picker.Item label="декабрь" value=""></Picker.Item>  
-                </Picker>  
-                <Picker>
-                    <Picker.Item label="1900" value=""></Picker.Item>  
-                    <Picker.Item label="1901" value=""></Picker.Item> 
-                    <Picker.Item label="1902" value=""></Picker.Item> 
-                    <Picker.Item label="1903" value=""></Picker.Item> 
-                    <Picker.Item label="1904" value=""></Picker.Item> 
-                    <Picker.Item label="1905" value=""></Picker.Item> 
-                    <Picker.Item label="1906" value=""></Picker.Item> 
-                    <Picker.Item label="1907" value=""></Picker.Item> 
-                    <Picker.Item label="1908" value=""></Picker.Item> 
-                    <Picker.Item label="1910" value=""></Picker.Item> 
-                    <Picker.Item label="1911" value=""></Picker.Item> 
-                    <Picker.Item label="1912" value=""></Picker.Item> 
-                    <Picker.Item label="1913" value=""></Picker.Item> 
-                    <Picker.Item label="1914" value=""></Picker.Item> 
-                    <Picker.Item label="1915" value=""></Picker.Item> 
-                    <Picker.Item label="1916" value=""></Picker.Item> 
-                    <Picker.Item label="1917" value=""></Picker.Item> 
-                    <Picker.Item label="1918" value=""></Picker.Item> 
-                    <Picker.Item label="1919" value=""></Picker.Item> 
-                    <Picker.Item label="1920" value=""></Picker.Item> 
-                    <Picker.Item label="1900" value=""></Picker.Item> 
-                    <Picker.Item label="1900" value=""></Picker.Item> 
-                    <Picker.Item label="1900" value=""></Picker.Item> 
-                    <Picker.Item label="1900" value=""></Picker.Item> 
-                    <Picker.Item label="1900" value=""></Picker.Item>   
-                </Picker> */}         
-                <TouchableOpacity style={styles.entryButton} onPress={() => navigation.navigate('BicyclePage')}>
-                    <Text style={styles.entryButonText}>Войти</Text>                   
-                </TouchableOpacity>            
-                <TouchableOpacity style={styles.entrySocialButton}>
-                    <Image source={require('../src/img/google-icon-logo.png')} style={styles.icon} />
-                    <Text style={styles.entrySocialButtonText}>Войти через Google</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.entrySocialButton}>
-                <Image source={require('../src/img/facebook-icon-logo.png')} style={styles.icon} />
-                    <Text style={styles.entrySocialButtonText}>Войти через Facebook</Text>
-                </TouchableOpacity>
-                <Text style={styles.registerTitle}>Ещё нет аккаунта?</Text>
-                <TouchableOpacity>
-                    <Text style={styles.registerText}>Зарегистрироваться</Text>   
-                </TouchableOpacity>
-            </View>
-        </View>
-    )  
+        )  
+    }
 }
 
 const styles = StyleSheet.create
@@ -92,6 +162,7 @@ const styles = StyleSheet.create
     },
 
     mainContainer: {
+        backgroundColor: "#fff",
         height: '92%',
         backgroundColor: '#C1DB81',
         padding: 20,        
@@ -100,6 +171,13 @@ const styles = StyleSheet.create
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center'
+    },
+
+    mainContent: {
+        flexDirection: 'column',
+        alignItems: 'center',
+        width: '100%',
+        marginTop: 10,
     },
 
     header: 
@@ -124,8 +202,7 @@ const styles = StyleSheet.create
     title: {
         color: '#FFFFFF',
         fontSize: 30,
-        fontWeight: 'bold',
-        marginTop: 125,
+        fontWeight: 'bold',        
         //fontFamily: 'Alegreya'
     },
 
@@ -142,12 +219,12 @@ const styles = StyleSheet.create
     },
 
     entryButton: {
-        width: '40%',
+        width: '65%',
         height: '7%',
         alignItems: "center",
         backgroundColor: "#169BD5",
         marginTop: 15,
-        marginBottom: 25,
+        marginBottom: 10,
         justifyContent: 'center',
         borderRadius: 7,
 
@@ -186,7 +263,7 @@ const styles = StyleSheet.create
 
     registerTitle: {
         color: '#55692C',
-        marginTop: 20,
+        marginTop: 10,
 
     },
 

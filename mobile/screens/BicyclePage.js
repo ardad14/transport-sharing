@@ -10,8 +10,7 @@ export default class BicyclePage extends React.Component {
     constructor() {
         super()        
         this.state = {
-            markers: stations
-                                
+            markers: stations                                
         }             
     }
     
@@ -56,17 +55,10 @@ export default class BicyclePage extends React.Component {
                                     latitude: marker.latitude,
                                     longitude: marker.longitude,
                                 }}
-                                onPress={() => onShowPopup(marker.title, marker.address)}                                
+                                onPress={() => onShowPopup(marker.id, marker.address)}                                
                                 icon={require('../src/img/bike_icon.png')}
                                 >
-                                    <Callout tooltip>
-                                        <View>
-                                            <View style={styles.infoField}>
-                                                <Text style={styles.bikeName}>{marker.title}</Text>
-                                                <Text >{marker.descript}</Text>
-                                            </View>
-                                        </View>
-                                    </Callout>
+                                    
                                 </Marker>
                             ))
                         }               
@@ -78,21 +70,22 @@ export default class BicyclePage extends React.Component {
                 <View style={styles.buttonContainer}>
                         <TouchableOpacity style={styles.toBicyclePage} >
                             <Image style={styles.buttonImage} source={require('../src/img/white-bike-navb.png')}/>
-                            <Text style={styles.buttonText}>Карта велосипедов</Text>                   
+                            <Text style={styles.buttonText}>Карта велосипедів</Text>                   
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.toScooterPage} onPress={() => this.props.navigation.navigate('ScooterPage')}>
                             <Image style={styles.ScooterImage} source={require('../src/img/green-scooter-navb.png')}/>
-                            <Text style={styles.buttonScooterText}>Карта самокатов</Text>                   
+                            <Text style={styles.buttonScooterText}>Карта самокатів</Text>                   
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.toCarPage} onPress={() => this.props.navigation.navigate('CarPage')}>
                             <Image style={styles.CarImage} source={require('../src/img/green-car-navb.png')}/>
-                            <Text style={styles.buttonCarText}>Карта автомобилей</Text>                   
+                            <Text style={styles.buttonCarText}>Карта автомобілей</Text>                   
                         </TouchableOpacity>
                 </View>
                 <View>
                 <BicycleModal                    
                     ref={(target) => popupRef = target}
-                    onTouchOutside={onClosePopup}                
+                    onTouchOutside={onClosePopup}
+                    navigation={this.props.navigation}                
                 />
                 </View>
             </View>
@@ -230,6 +223,7 @@ const styles = StyleSheet.create
 
     buttonScooterText: 
     {
+        width: 80,
         textAlign: 'center',
     },
 
@@ -248,7 +242,7 @@ const styles = StyleSheet.create
     ScooterImage:
     {
         width: 45,
-        height: 40,
+        height: 45,
     },
 
     CarImage:

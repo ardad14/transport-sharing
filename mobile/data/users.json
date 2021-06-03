@@ -1,0 +1,13 @@
+[
+    {
+        "id": 1,
+        "firstName": "Артём",
+        "lastName": "Купцов",
+        "email": "artem.kuptsov@nure.ua",
+        "phone": "380958800111",
+        "birthday": "01.02.02",
+        "password": "qwerty1234",
+        "city": "Kharkiv",
+        "money": 20
+    }
+]

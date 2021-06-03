@@ -64,13 +64,13 @@ export default class AllRecords extends React.Component {
                                             <Text style={[styles.tripInfoText, styles.tripInfoNumbers]}>{item.vehicleId}</Text>
                                         </View>
                                         <View style={styles.column}>
-                                            <Text style={styles.tripInfoText}>Длительность</Text>
-                                            <Text style={[styles.tripInfoText, styles.tripInfoTime]}>{item.duration} мин</Text>
+                                            <Text style={styles.tripInfoText}>Тривалість</Text>
+                                            <Text style={[styles.tripInfoText, styles.tripInfoTime]}>{item.duration} хвилин</Text>
                                         </View>
                                     </View>   
                                 </View>
                                 <View style={[styles.elementFooter, styles.row]}>
-                                    <Text style={styles.headerBottomText}>Сумма:</Text>
+                                    <Text style={styles.headerBottomText}>Сума:</Text>
                                     <Text style={styles.headerBottomText}>{item.sum} грн</Text>
                                 </View>
 
